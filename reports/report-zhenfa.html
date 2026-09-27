@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>标的尽调 D3 · 圳发云谷（圳发投资）· 2026年9月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f5f1;--card:#fff;--ink:#1c2430;--sub:#5b6675;--faint:#8a93a3;--line:#e3ded4;--navy:#16324f;--verm:#b5452f;--green:#1e6e52;--amber:#9a6b1a;--shadow:0 1px 2px rgba(28,36,48,.05),0 8px 28px rgba(28,36,48,.07)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Noto Serif SC","Songti SC",serif}
+a{color:var(--verm);text-decoration:none;border-bottom:1px solid rgba(181,69,47,.3)}
+a:hover{border-bottom-color:var(--verm);background:rgba(181,69,47,.06)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:4px;height:56px}
+nav .brand{font-family:"Noto Serif SC",serif;font-weight:900;color:var(--navy);font-size:15px}
+nav a.nl{color:var(--sub);border:none;font-size:13.5px;padding:6px 10px;border-radius:8px}
+nav a.nl:hover{background:#eee9df;color:var(--navy)}
+.hero{padding:56px 0 36px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbf9f5,var(--paper))}
+.kicker{display:inline-block;background:var(--navy);color:#fff;font-size:12.5px;letter-spacing:.28em;padding:5px 14px;border-radius:3px}
+h1{font-size:clamp(24px,4vw,36px);line-height:1.35;margin:18px 0 12px;font-weight:900;color:var(--navy)}
+.hero .sub{color:var(--sub);font-size:15px;max-width:760px}
+.hero .meta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 15px;font-size:13px;color:var(--sub);box-shadow:var(--shadow)}
+.pill.risk-high{border-color:var(--verm);color:var(--verm);font-weight:700}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+.secno{font-size:13px;letter-spacing:.3em;color:var(--verm);font-weight:700}
+h2{font-size:clamp(20px,2.6vw,26px);color:var(--navy);margin:6px 0 14px;font-weight:900}
+p{margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+.fact{border-left:4px solid var(--navy)}
+.fact::before{content:"事 实";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--navy);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.view{border-left:4px solid var(--verm);background:linear-gradient(180deg,#fff,#fdf8f5)}
+.view::before{content:"专业解读";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--verm);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.tblwrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#f2eee6;color:var(--navy);font-weight:700;white-space:nowrap}
+.tag{display:inline-block;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:500;margin:1px 3px 1px 0;white-space:nowrap}
+.tag.ok{background:#e4f0ea;color:var(--green)}
+.tag.warn{background:#fdf3e3;color:var(--amber)}
+.tag.risk{background:#fbe7e4;color:var(--verm)}
+.note{font-size:12.8px;color:var(--faint);line-height:1.7}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;margin:10px 0}
+.flow .node{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 14px;box-shadow:var(--shadow)}
+.flow .node b{color:var(--navy)}
+.flow .arr{color:var(--faint);font-size:12px}
+footer{padding:36px 0 56px;color:var(--faint);font-size:13px}
+.tblwrap{-webkit-overflow-scrolling:touch}
+@media(max-width:640px){section{padding:36px 0}.card{padding:16px 16px}nav a.nl{padding:10px 12px;font-size:14px}th,td{padding:10px 12px}}
+@media(max-width:860px){.tblwrap::after{content:"◀ 左右滑动查看完整表格 ▶";display:block;text-align:center;font-size:11.5px;color:var(--faint);padding:6px 0 8px;border-top:1px dashed var(--line)}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="brand">尽调子报告 D3</span>
+  <a class="nl" href="../index.html#listings">← 返回主报告标的库</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">DUE DILIGENCE · D3</span>
+  <h1>圳发云谷大厦（一手分层）<br>开发主体：深圳市圳发投资有限公司</h1>
+  <p class="sub">标的对应主报告 02 号标的库"圳发云谷大厦，一手分层"（信源 S4）。本报告核查对象为项目开发商深圳市圳发投资有限公司及其上层持股结构，核查时点 2026 年 9 月 27 日。</p>
+  <div class="meta">
+    <span class="pill risk-high">综合风险评级：中高</span>
+    <span class="pill">实控人：自然人吴革命</span>
+    <span class="pill">在执案件 1 宗 · 股权出质 1 笔 · 多起诉讼</span>
+    <span class="pill">核查时点：2026-09-27</span>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="secno">REGISTRATION</div>
+  <h2>工商登记档案</h2>
+  <div class="tblwrap"><table>
+    <tr><th>项目</th><th>登记内容</th></tr>
+    <tr><td>企业名称</td><td>深圳市圳发投资有限公司（统一社会信用代码 91440300MA5EP2465H）</td></tr>
+    <tr><td>登记状态 / 成立日期</td><td>存续；2017 年 8 月成立</td></tr>
+    <tr><td>注册资本 / 实缴</td><td>5,000 万元 / 5,000 万元</td></tr>
+    <tr><td>法定代表人</td><td>吴革命（兼任董事、经理）</td></tr>
+    <tr><td>注册地址</td><td>深圳市光明区马田街道石围社区将石路 176-100 号圳发云谷大厦 2 栋 1901（即项目自身）</td></tr>
+    <tr><td>行业与人员</td><td>创业空间服务；社保参保 7 人，小微企业</td></tr>
+    <tr><td>企业类型</td><td>有限责任公司（法人独资）</td></tr>
+  </table></div>
+  <p class="note" style="margin-top:8px">来源：<a href="https://www.tianyancha.com/company/3111306231" target="_blank">天眼查企业档案页</a>；天眼查开放平台工商信息接口，2026-09-27 查询。</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">OWNERSHIP</div>
+  <h2>股权穿透</h2>
+  <div class="flow">
+    <span class="node"><b>吴革命</b>（自然人）<br><span class="note">100% 认缴 500 万元，2030-08 缴付期</span></span>
+    <span class="arr">── 100% ──▶</span>
+    <span class="node"><b>深圳市圳发正行企业管理有限公司</b><br><span class="note">持股平台</span></span>
+    <span class="arr">── 100% ──▶</span>
+    <span class="node"><b>深圳市圳发投资有限公司</b><br><span class="note">认缴 5,000 万元，2030-08 缴付期</span></span>
+  </div>
+  <div class="card view"><b>解读：</b>两层穿透后实控人为单一自然人，属典型的民营产业地产开发商结构。注意两层的认缴出资缴付期限均为 2030 年——"实缴 5000 万"指圳发投资层面已缴，上层持股平台的出资义务尚在远期。民营开发商、盘子小（社保 7 人）、个人实控，这三点叠加意味着项目履约能力高度依赖单一主体信用，合同保障条款的重要性显著高于国企盘。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">RISK SCAN</div>
+  <h2>风险核查记录</h2>
+  <div class="tblwrap"><table>
+    <tr><th>核查项</th><th>结果</th><th>明细</th><th>数据源</th></tr>
+    <tr><td>失信被执行人</td><td><span class="tag ok">无记录</span></td><td>天眼查与财新全国失信名单双源均为空</td><td>天眼查 / 财新，2026-09-27</td></tr>
+    <tr><td>被执行人</td><td><span class="tag risk">在执 1 宗</span></td><td>（2026）粤0311执5660号，深圳市光明区人民法院，执行标的 970,441 元，2026 年立案</td><td>天眼查，2026-09-27</td></tr>
+    <tr><td>股权出质</td><td><span class="tag risk">1 笔有效</span></td><td>公司股权出质予中国光大银行深圳分行，2022-04-20 登记，状态有效</td><td>天眼查，2026-09-27</td></tr>
+    <tr><td>开庭公告</td><td><span class="tag risk">6 条 / 多案</span></td><td>2025–2026 年：与中建四局土木、德源宝混凝土买卖合同纠纷（南山区法院，2025 粤0305民初34978）；与深圳维他（光明）食品饮料纠纷（光明区法院，2026 粤0311民初3574）；与芯影智能科技纠纷（宝安区法院，2026 粤0306民初35715）</td><td>天眼查，2026-09-27</td></tr>
+    <tr><td>行政处罚 / 经营异常</td><td><span class="tag ok">均无记录</span></td><td>—</td><td>天眼查，2026-09-27</td></tr>
+  </table></div>
+  <div class="card fact" style="margin-top:16px"><b>事实：</b>该公司当前同时存在：1 宗未结执行案件（约 97 万元）、1 笔银行股权质押、至少 3 宗独立诉讼（涉及施工方、供应商与园区租户/关联方）。楼盘平台显示该项目另有公寓业态（圳发云府）2022 年取得预售证（深房许字〔2022〕光明002号）<a href="https://sz.newhouse.fang.com/loupan/2810200632/housedetail.htm" target="_blank">[房天下]</a>。</div>
+  <div class="card view"><b>解读：</b>三个信号指向同一结论——这家开发商的资金链处于紧绷状态：股权押给银行、被执行近百万、与施工总包和混凝土供应商对簿公堂（工程链欠款是开发商流动性压力的典型表征）。97 万元的执行标的绝对额不大，但发生在在售项目的开发商身上，性质比金额重要。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">OPINION</div>
+  <h2>综合研判</h2>
+  <div class="card view"><b>中高风险：产品可以看，交易结构必须重做。</b>圳发云谷的物业本身（一层一证、50 年独立红本、13 号线东周站预期）在光明一手分层盘中参数不差，但卖方主体信用是四宗第一梯队标的中最弱的。若推进，三道防线缺一不可：其一，全额资金监管，任何款项不进开发商自有账户；其二，逐套解押、先解押后付款，并在签约前取得光大银行对拟购单元抵押状态的书面确认；其三，要求开发商披露在执案件与全部诉讼的结案计划，并将"无新增查封"设为付款先决条件。若卖方无法接受上述结构，放弃该标的——同价位在光明仍有主体更干净的替代盘。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">SOURCES</div>
+  <h2>信源清单</h2>
+  <div class="tblwrap"><table>
+    <tr><th>编号</th><th>信源</th><th>用途</th><th>时点</th></tr>
+    <tr><td>D3-1</td><td><a href="https://www.tianyancha.com/company/3111306231" target="_blank">天眼查 · 圳发投资档案</a>（工商、股东、被执行、出质、开庭接口）</td><td>主体核查主源</td><td>2026-09-27</td></tr>
+    <tr><td>D3-2</td><td><a href="https://www.tianyancha.com/company/5054468708" target="_blank">天眼查 · 圳发正行（上层股东）档案</a></td><td>股权穿透</td><td>2026-09-27</td></tr>
+    <tr><td>D3-3</td><td>财新企业库 · 全国失信被执行人名单接口</td><td>失信交叉验证（无记录）</td><td>2026-09-27</td></tr>
+    <tr><td>D3-4</td><td><a href="https://sz.newhouse.fang.com/loupan/2810200632/housedetail.htm" target="_blank">房天下 · 圳发云谷楼盘档案（预售证、开发商字段）</a></td><td>开发商身份交叉印证</td><td>2022–2024</td></tr>
+    <tr><td>D3-5</td><td><a href="https://www.99cfw.com/sz/changfang/zsryuysyrrntxw.html" target="_blank">久久厂房网 · 项目在售信息（主报告 S4）</a></td><td>挂牌口径</td><td>2024-07</td></tr>
+  </table></div>
+  <p class="note" style="margin-top:10px">天眼查与财新为第三方商业数据库，所录为核查时点的登记与公示信息镜像；查封、抵押与案件进展以法院与不动产登记部门为准。</p>
+</div></section>
+
+<footer><div class="wrap">尽调子报告 D3 · 隶属《深圳光明区 × 宝安松岗 工业物业购置研究报告》· 核查时点 2026-09-27 · <a href="../index.html">返回主报告</a></div></footer>
+
+</body>
+</html>

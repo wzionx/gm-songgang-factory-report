@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深圳光明区 × 宝安松岗 工业物业购置研究报告 · 2026年9月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<style>
+:root{
+  --paper:#f7f5f1; --card:#ffffff; --ink:#1c2430; --sub:#5b6675; --faint:#8a93a3;
+  --line:#e3ded4; --navy:#16324f; --verm:#b5452f; --green:#1e6e52; --amber:#9a6b1a;
+  --shadow:0 1px 2px rgba(28,36,48,.05),0 8px 28px rgba(28,36,48,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:"Noto Serif SC","Songti SC",serif}
+a{color:var(--verm);text-decoration:none;border-bottom:1px solid rgba(181,69,47,.3);transition:.2s}
+a:hover{border-bottom-color:var(--verm);background:rgba(181,69,47,.06)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:4px;overflow-x:auto;height:56px}
+nav .brand{font-family:"Noto Serif SC",serif;font-weight:900;color:var(--navy);white-space:nowrap;margin-right:14px;font-size:15px}
+nav a.nl{color:var(--sub);border:none;font-size:13.5px;white-space:nowrap;padding:6px 10px;border-radius:8px}
+nav a.nl:hover{background:#eee9df;color:var(--navy)}
+/* hero */
+.hero{padding:72px 0 46px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbf9f5,var(--paper))}
+.kicker{display:inline-block;background:var(--navy);color:#fff;font-size:12.5px;letter-spacing:.28em;padding:5px 14px;border-radius:3px}
+h1{font-size:clamp(26px,4.6vw,44px);line-height:1.35;margin:20px 0 14px;font-weight:900;color:var(--navy)}
+.hero .sub{color:var(--sub);font-size:15.5px;max-width:760px}
+.hero .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 15px;font-size:13px;color:var(--sub);box-shadow:var(--shadow)}
+/* sections */
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+.secno{font-size:13px;letter-spacing:.3em;color:var(--verm);font-weight:700}
+h2{font-size:clamp(22px,3vw,30px);color:var(--navy);margin:6px 0 10px;font-weight:900}
+.lede{color:var(--sub);font-size:15px;max-width:820px;margin-bottom:30px}
+h3{font-size:19px;color:var(--navy);margin:34px 0 12px}
+p{margin-bottom:14px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;box-shadow:var(--shadow)}
+.card.tight{padding:18px 20px}
+/* reveal animation */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+/* kpi */
+.kpi .num{font-family:"Noto Serif SC",serif;font-size:34px;font-weight:900;color:var(--verm);line-height:1.15}
+.kpi .num small{font-size:16px;color:var(--sub);font-weight:500}
+.kpi .lbl{color:var(--sub);font-size:13.5px;margin-top:8px;line-height:1.7}
+/* fact vs opinion */
+.fact{border-left:4px solid var(--navy)}
+.fact::before{content:"事 实";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--navy);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.view{border-left:4px solid var(--verm);background:linear-gradient(180deg,#fff,#fdf8f5)}
+.view::before{content:"专业解读";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--verm);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.fact::before,.view::before{font-family:"Noto Sans SC",sans-serif}
+/* glossary */
+.term{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.term b{color:var(--navy)}
+.term .en{color:var(--faint);font-size:12px;display:block;margin-bottom:4px;letter-spacing:.06em}
+.term p{font-size:13.5px;color:var(--sub);margin:4px 0 0;line-height:1.75}
+/* table */
+.tblwrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:860px}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#f2eee6;color:var(--navy);font-weight:700;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0}
+tbody tr:hover{background:#faf7f1}
+.filters{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:16px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow)}
+.filters label{font-size:13.5px;color:var(--sub);display:flex;align-items:center;gap:8px}
+.filters select,.filters input{border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:13.5px;background:#fff;color:var(--ink)}
+.tag{display:inline-block;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:500;margin:1px 3px 1px 0;white-space:nowrap}
+.tag.gm{background:#e8eefb;color:#2b4f9e}.tag.sg{background:#f6ecdc;color:#8a5a14}
+.tag.red{background:#e4f0ea;color:var(--green)}.tag.risk{background:#fbe7e4;color:var(--verm)}
+.tag.gray{background:#eef0f3;color:var(--sub)}
+/* chart reading guide */
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:20px 18px 8px;margin-bottom:20px}
+.chartbox .q{font-size:14px;color:var(--navy);font-weight:700;margin-bottom:2px}
+.chartbox .how{font-size:12.8px;color:var(--faint);margin-bottom:6px;line-height:1.7}
+.chart{width:100%;height:400px}
+.note{font-size:12.8px;color:var(--faint);line-height:1.7}
+.src-mini{font-size:12.5px}
+/* chain */
+.chain{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px;box-shadow:var(--shadow)}
+.chain h4{font-size:16.5px;color:var(--navy);margin-bottom:10px;font-family:"Noto Serif SC",serif}
+.chain ol{margin:0 0 10px 20px;font-size:14px;color:var(--ink)}
+.chain ol li{margin-bottom:6px}
+.chain .conf{font-size:13px;color:var(--sub);border-top:1px dashed var(--line);padding-top:10px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.dot.h{background:var(--green)}.dot.m{background:var(--amber)}.dot.l{background:var(--verm)}
+/* tier legend */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--sub)}
+.tier b{display:inline-block;min-width:26px;text-align:center;border-radius:5px;color:#fff;margin-right:8px;font-size:12.5px}
+.tier.s b{background:var(--navy)}.tier.a b{background:var(--green)}.tier.b b{background:var(--amber)}.tier.c b{background:var(--verm)}
+ul.ck{padding-left:22px}ul.ck li{margin-bottom:9px}
+.posneg{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pos{border-top:4px solid var(--green)}.neg{border-top:4px solid var(--verm)}
+footer{padding:44px 0 70px;color:var(--faint);font-size:13px}
+footer .wrap{border-top:1px solid var(--line);padding-top:28px}
+@media(max-width:900px){
+  .g2,.g3,.g4,.posneg,.tiers{grid-template-columns:1fr 1fr}
+  .chart{height:330px}
+  body{font-size:15px}
+}
+@media(max-width:600px){
+  .g2,.g3,.g4,.posneg,.tiers{grid-template-columns:1fr}
+  section{padding:44px 0}
+  .chart{height:300px}
+  nav .brand{font-size:13px}
+  nav a.nl{padding:10px 12px;font-size:14px}
+  .filters label{width:100%}
+  .filters select,.filters input{flex:1;padding:10px 12px;font-size:15px}
+  .card{padding:18px 18px}
+  th,td{padding:10px 12px}
+}
+/* 触屏表格滑动 */
+.tblwrap{-webkit-overflow-scrolling:touch;position:relative}
+@media(max-width:860px){
+  .tblwrap::after{content:"◀ 左右滑动查看完整表格 ▶";display:block;text-align:center;font-size:11.5px;color:var(--faint);padding:6px 0 8px;border-top:1px dashed var(--line)}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="brand">光明 × 松岗 工业物业研究报告</span>
+  <a class="nl" href="#guide">阅读指南</a>
+  <a class="nl" href="#terms">术语表</a>
+  <a class="nl" href="#exec">核心结论</a>
+  <a class="nl" href="#listings">标的库</a>
+  <a class="nl" href="#ddtier">标的尽调</a>
+  <a class="nl" href="#market">市场分析</a>
+  <a class="nl" href="#policy">政策制度</a>
+  <a class="nl" href="#location">区位动态</a>
+  <a class="nl" href="#dd">尽调清单</a>
+  <a class="nl" href="#chain">证据链</a>
+  <a class="nl" href="#sources">信源登记</a>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">INDUSTRIAL PROPERTY · SHENZHEN</span>
+    <h1>深圳光明区 × 宝安松岗<br>2万–4万平方米厂房及工业用地购置研究报告</h1>
+    <p class="sub">面向制造业企业购地置厂决策的专业调查。覆盖两地可售标的、市场价格体系、四级政策法规、区位交通与旧改动态、交易尽调要点。全部事实性陈述均附可点击的公开信源。</p>
+    <div class="meta">
+      <span class="pill">编制日期：2026年9月27日</span>
+      <span class="pill">目标面积：2万–4万㎡ 建筑面积</span>
+      <span class="pill">产权要求：红本（国有出让产权）优先</span>
+      <span class="pill">预算：不设上限</span>
+      <span class="pill">公开信源：31 条</span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 阅读指南 ================= -->
+<section id="guide">
+  <div class="wrap rv">
+    <div class="secno">READING GUIDE</div>
+    <h2>阅读指南：本报告的信源分级与数据口径</h2>
+    <p class="lede">工业物业是非标准化市场，不同渠道的信息可靠度差异极大。本报告对每一条信源标注等级，正文中以 [编号] 引用，点击可直达原始页面。请先阅读以下两级约定，再看正文。</p>
+    <h3 style="margin-top:0">一、信源可信度四级分级</h3>
+    <div class="tiers">
+      <div class="tier s"><b>S</b>政府官网原文：深圳市人民政府、规划和自然资源局、国资委等。法律效力最高。</div>
+      <div class="tier a"><b>A</b>官方机构与权威披露：交易所公告、上市公司监管披露、主流媒体引用的五大行报告。</div>
+      <div class="tier b"><b>B</b>门户与交易平台：安居客、58同城、搜狐/网易房产频道、司法拍卖平台。信息真实存在但含广告立场。</div>
+      <div class="tier c"><b>C</b>垂直厂房平台与中介发布：中工招商网、指点网、久久厂房网等。标的线索价值高，参数须逐宗核验。</div>
+    </div>
+    <div style="height:22px"></div>
+    <h3>二、两套价格口径，切勿混淆</h3>
+    <div class="grid g2">
+      <div class="card tight fact"><b>挂牌价（报价）</b>——业主或中介的出售意向价，是谈判起点而非行情本身。本报告标的库中的单价均属此类，并逐条标注信息时点。</div>
+      <div class="card tight fact"><b>成交价（实测）</b>——评估机构与监管披露中的真实成交水平。深圳厂房 2024 年第四季度实际成交均价为 7320 元/㎡，环比下跌 9% <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。挂牌价与成交价之间的差额即是议价空间。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 术语表 ================= -->
+<section id="terms">
+  <div class="wrap rv">
+    <div class="secno">GLOSSARY</div>
+    <h2>术语表：先看懂这八个词，再读报告</h2>
+    <p class="lede">以下术语在正文中高频出现，此处统一定义。正文中不再展开解释。</p>
+    <div class="grid g4">
+      <div class="term"><span class="en">RED CERTIFICATE</span><b>红本</b><p>《不动产权证书》的俗称，因封面红色得名。红本厂房指土地为国有出让性质、房屋已办理产权登记、可依法过户的物业。与之相对的是绿本（政策性住房）、两证一书等历史遗留产权，以及无证的违建物业。</p></div>
+      <div class="term"><span class="en">LAND USE CODE M1</span><b>M1 普通工业用地</b><p>城市规划用地分类中的一类工业用地，允许布置对居住和公共设施基本无干扰和污染的制造业厂房。本报告中多数一手高标厂房即为 M1 用地上的可售物业，产权 50 年。</p></div>
+      <div class="term"><span class="en">LAND USE CODE M0</span><b>M0 新型产业用地</b><p>为研发、中试、设计等新型产业功能设置的用地类型，容积率与配套比例高于 M1，多用于"研发办公+轻型生产"综合体。</p></div>
+      <div class="term"><span class="en">INDUSTRIAL UPSTAIRS</span><b>工业上楼</b><p>深圳在土地零新增背景下推行的政策方向：将传统单层厂房升级为高层高标准厂房，首层层高 8 米、荷载 2 吨级，让重型设备"上楼"。光明区在售一手红本厂房绝大多数属于此类产品。</p></div>
+      <div class="term"><span class="en">EQUITY TRANSFER</span><b>股权过户</b><p>不直接买卖物业，而是收购持有物业的公司股权，间接取得物业控制权。松岗二手园区普遍采用此方式，可规避部分交易税费，但买方须承接目标公司的全部历史负债与或有风险。</p></div>
+      <div class="term"><span class="en">FLOOR PRICE</span><b>楼面地价</b><p>土地总价除以规划允许的最大建筑面积，是衡量土地贵贱的统一标尺。政府挂牌工业用地常以楼面地价计价。</p></div>
+      <div class="term"><span class="en">INDUSTRIAL BLOCK LINE</span><b>工业区块线</b><p>深圳为保障制造业空间划定的管控红线。一级线内的工业楼宇转让，买方除须为注册企业外，还须符合产业准入目录 <a href="https://www.sz.gov.cn/zfgb/2025/gb1360/content/post_11980017.html" target="_blank">[S18]</a>。</p></div>
+      <div class="term"><span class="en">20+8 CLUSTERS</span><b>"20+8"产业集群</b><p>深圳市战略性新兴产业集群（20 个）与未来产业（8 个）的统称，是产业准入、用地供应与补贴政策的总框架，2026 年将升级至 3.0 版 <a href="https://stcn.com/article/detail/3635428.html" target="_blank">[S33]</a>。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 核心结论 ================= -->
+<section id="exec">
+  <div class="wrap rv">
+    <div class="secno">EXECUTIVE SUMMARY</div>
+    <h2>01 · 核心结论</h2>
+    <p class="lede">四条结论，每条均可在第八章证据链中逐条回溯至原始信源。</p>
+    <div class="grid g4">
+      <div class="card kpi"><div class="num" data-n="9000">0<small> 元/㎡</small></div><div class="lbl">光明与松岗<b>二手独院红本工业园</b>挂牌单价上限，主力带 6000–9000 元/㎡。按 2万–4万㎡ 计，总价区间约 1.2 亿–3.6 亿元 <a href="http://sz.zhaoshang800.com/cf/a440311000c2/" target="_blank">[S12]</a></div></div>
+      <div class="card kpi"><div class="num" data-n="8300">0<small> 元/㎡起</small></div><div class="lbl">光明<b>一手工业上楼红本厂房</b>分层售价起点，主流 8300–14500 元/㎡，单套 1300–7000㎡，可整栋组合 <a href="https://www.sohu.com/a/1005778629_122618451" target="_blank">[S1]</a> <a href="https://c.m.163.com/news/a/KI4B043K05568XNR.html" target="_blank">[S3]</a></div></div>
+      <div class="card kpi"><div class="num" data-n="50">0<small>%</small></div><div class="lbl">2026 年上半年深圳大宗交易中<b>工业厂房的成交金额占比</b>，居各物业类型之首 <a href="https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifveam1854940.shtml" target="_blank">[S16]</a></div></div>
+      <div class="card kpi"><div class="num" data-n="7320">0<small> 元/㎡</small></div><div class="lbl">2024 年第四季度深圳厂房<b>实际成交均价</b>，环比下跌 9%。买方市场格局明确 <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a></div></div>
+    </div>
+    <div style="height:20px"></div>
+    <div class="grid g2">
+      <div class="card view"><b>结论一：松岗以二手独门独院红本园区为主，是 2万㎡ 级整体物业的主战场。</b>当前可溯源标的中，松岗有 5 宗 2万–3.6万㎡ 建面的独院园区处于在售或近期挂牌状态，建面单价 6000–12000 元/㎡，普遍为 1999–2049 年到期的 50 年产权，交易方式以整体产权或股权过户为主。单层 9–11 米层高的物业适合物流仓储与重型制造。</div>
+      <div class="card view"><b>结论二：光明是"一手分层 + 二手独院"双轨市场。</b>一手盘为 50 年新红本的工业上楼产品，可按揭、可分层，但单套面积小，达到 2万㎡ 需整栋或多套打包；二手市场存在 3万–4.2万㎡ 国有证独院，报价 6000–9000 元/㎡，但其中混有"土地有红本、厂房无产权登记"的瑕疵标的，须逐宗甄别 <a href="https://www.shangpu99.com/gccsdetail/id/1092.html" target="_blank">[S5]</a>。</div>
+      <div class="card view"><b>结论三：议价空间制度化存在，但存在下限。</b>挂牌价与 7320 元/㎡ 的实测均价之间普遍有 10%–25% 空间；但依深圳 2026 年供地新规，转让申报价低于市场价 20% 以上时，区政府可行使优先购买权 <a href="https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html" target="_blank">[S14]</a>。谈判策略应贴近但不击穿该阈值。</div>
+      <div class="card view"><b>结论四：区位变量正在重估两地价值。</b>光明侧，地铁 13 号线二期北延段 2026 年 6 月 28 日通车，光明科学城至南山科技园缩至约 45 分钟 <a href="https://finance.sina.cn/2026-03-30/detail-inhsuefa2771935.d.html?vt=4" target="_blank">[S27]</a>；松岗侧，地铁 12 号线二期 2025 年底通车后松岗站实现三线换乘 <a href="https://static.nfnews.com/content/202410/24/c10192706.html?enterColumnId=75" target="_blank">[S28]</a>，广深高速深圳段改扩建将新增松福大道互通，松岗至福田通勤预计缩短约 40% <a href="https://static.nfnews.com/content/202509/11/c11713724.html?enterColumnId=0" target="_blank">[S30]</a>。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 标的库 ================= -->
+<section id="listings">
+  <div class="wrap rv">
+    <div class="secno">LISTINGS</div>
+    <h2>02 · 可溯源标的库</h2>
+    <p class="lede">收录 14 宗有公开网页佐证的挂牌或在售标的。所有价格均为挂牌报价口径，非成交价。默认按<b>状态维度</b>排序：<b>在挂/在售</b>优先，<b>待核实</b>（挂牌超过一年或仅有历史房源佐证）居中，<b>已下架</b>沉底——下架标的中，凡无其他渠道旁证的一律删除不收（如 13483㎡ 独院、17000㎡ 厂房两宗已于 2026-09-27 实测 404 且无旁证，已移除）；恒兆工业区虽下架，但主体与资产经工商尽调核实真实存在（见 D4 子报告），故保留并沉底标注。点击表头可按列排序，用筛选器按区域、产权、面积段过滤。安居客与 58 同城设有光明、松岗厂房出售常驻频道，可作为每日盯盘入口 <a href="https://m.anjuke.com/shenzhen/cf/shou/guangmingxinqu" target="_blank">[S34]</a> <a href="https://m.anjuke.com/sz/cf/shou/baoan-songgang/" target="_blank">[S35]</a>。</p>
+    <div class="filters">
+      <label>区域 <select id="fArea"><option value="">全部</option><option value="光明">光明区</option><option value="松岗">松岗（宝安）</option></select></label>
+      <label>产权 <select id="fCert"><option value="">全部</option><option value="红本">红本/国有证</option><option value="瑕疵">含产权瑕疵</option></select></label>
+      <label>面积 <select id="fSize"><option value="">全部</option><option value="in">2万–4万㎡ 目标区间</option><option value="combo">可组合达标（一手分层/整栋）</option><option value="out">区间外</option></select></label>
+      <label>关键词 <input id="fKw" placeholder="地铁 / 高速 / 层高 / 空置" style="width:170px"></label>
+      <span class="note" id="fCount"></span>
+    </div>
+    <div class="tblwrap"><table id="ltable">
+      <thead><tr><th data-k="area">区域</th><th data-k="name">标的与位置</th><th data-k="bldg">建面㎡</th><th data-k="price">报价</th><th data-k="unit">单价元/㎡</th><th>产权与形态</th><th>关键参数</th><th>信源与时点</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p class="note" style="margin-top:10px">面积口径为建筑面积。"可组合达标"指一手分层盘单套 1300–7000㎡，需整栋或多套打包方可达到 2万㎡。标注"老旧信息"的标的仅用于勾勒价格历史带，不作为当前可交易标的。</p>
+    <div style="height:26px"></div>
+    <div class="grid g2">
+      <div class="chartbox">
+        <div class="q">这张图回答：各标的报价在全市价格坐标系中处于什么位置？</div>
+        <div class="how">读法：蓝色柱为光明标的，金色柱为松岗标的，红色柱为产权瑕疵标的。绿色虚线是 2024 年第四季度全市厂房实际成交均价 7320 元/㎡ <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。柱子向右超出虚线越多，挂牌溢价越高，谈判空间越大。</div>
+        <div id="chartUnit" class="chart"></div>
+      </div>
+      <div class="chartbox">
+        <div class="q">这张图回答：目标面积段内，总价与面积呈什么关系？</div>
+        <div class="how">读法：横轴建筑面积、纵轴总价，气泡越大总价越高。绿色阴影带即 2万–4万㎡ 目标区间。带内偏下方的标的单价更低，是优先谈判对象；带外的黄色大点为超面积园区，可作备选。</div>
+        <div id="chartScatter" class="chart"></div>
+      </div>
+    </div>
+
+    <h3 id="ddtier">02.1 尽调分级：哪些标的值得花钱深查，标准是什么</h3>
+    <p>14 宗标的不应平均用力。本报告按四个维度对每宗标的打分：<b>主体可识别性</b>（能否在工商登记体系锁定业主并核查）、<b>产权可过户性</b>（红本是否完整、证载与实测是否一致）、<b>信息时效</b>（是否当前在挂）、<b>交易结构复杂度</b>（产权过户还是股权交易、是否涉境外付款）。四项均达标者进入<b>第一梯队</b>，立即启动主体背景调查；主体匿名（中介房源未披露业主）者进入<b>第二梯队</b>，须先经中介取得产权人名称与不动产权证号后启动同样流程；产权瑕疵样本、已下架且无旁证者<b>不投入尽调成本</b>——后者已直接从标的库删除。</p>
+    <div class="tblwrap" style="margin-bottom:18px"><table>
+      <thead><tr><th>梯队</th><th>判定标准</th><th>标的</th><th>动作</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag red">第一梯队 · 已尽调</span></td><td>主体可在工商体系锁定 + 产权形态明确</td><td>光明科兴科学园（荣胜科创）、光明数字智造产业园（特区建工）、圳发云谷（圳发投资）、松岗恒兆工业区（恒兆发展——挂牌已下架，但主体与资产已核实，可直接接洽业主）</td><td>已完成工商、股权、被执行、失信、行政处罚、诉讼六项核查，各出一份子报告（见下方卡片）</td></tr>
+        <tr><td><span class="tag gray">第二梯队 · 部分核查</span></td><td>标的真实在挂但业主匿名，主体可识别性不满足</td><td>广田路 52 亩园区（已完成标的级核查，见 D5；主体识别为当前瓶颈）、107国道 3.6万㎡ 园区、松岗公园独栋、宝安 2万㎡ 独院（S49）等二手标的</td><td>约谈中介索取产权人名称与证号后，按第一梯队同一流程核查；取得主体信息前不出价</td></tr>
+        <tr><td><span class="tag risk">不投入</span></td><td>产权瑕疵对照样本；或挂牌页已下架且无任何旁证的标的——直接删除，不入库</td><td>光明 5万㎡ 瑕疵地（S5，仅作对照）；13483㎡ 独院、17000㎡ 厂房、塘下涌园区三宗因原页面 404 且无替代信源，已从标的库删除</td><td>对照样本仅作结构警示；已删除标的不再引用</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid g2">
+      <a class="card tight" href="reports/report-kexing.html" target="_blank" style="display:block;border-left:4px solid var(--green)">
+        <b>D1 · 光明科兴科学园 — 深圳市荣胜科创有限公司 <span class="tag red">中低风险</span></b>
+        <p class="note" style="margin-top:6px">科兴生物工程（正中系）持股 60% + 正中投资集团 40%，实缴资本超 10 亿元，无失信无被执行；4 笔银行股权质押属开发贷常规结构，付款须走资金监管并逐套解押。阅读完整子报告 →</p>
+      </a>
+      <a class="card tight" href="reports/report-shuzhizao.html" target="_blank" style="display:block;border-left:4px solid var(--green)">
+        <b>D2 · 光明数字智造产业园 — 特区建工集团（国有独资）<span class="tag red">低风险</span></b>
+        <p class="note" style="margin-top:6px">市管国企，注册资本 50 亿元，双源失信核查为空；"政府定价、国企交付"的政策性产品，价格最低但须先过产业准入与自用承诺两道资格关。阅读完整子报告 →</p>
+      </a>
+      <a class="card tight" href="reports/report-zhenfa.html" target="_blank" style="display:block;border-left:4px solid var(--verm)">
+        <b>D3 · 圳发云谷 — 深圳市圳发投资有限公司 <span class="tag risk">中高风险</span></b>
+        <p class="note" style="margin-top:6px">自然人吴革命全资实控；当前有 1 宗在执案件（约 97 万元）、1 笔光大银行股权质押、至少 3 宗诉讼缠身。物业参数不差，但交易结构必须重做：全额资金监管、先解押后付款、无新增查封作为付款先决条件。阅读完整子报告 →</p>
+      </a>
+      <a class="card tight" href="reports/report-hengzhao.html" target="_blank" style="display:block;border-left:4px solid var(--amber)">
+        <b>D4 · 松岗恒兆工业区整厂 — 深圳市恒兆发展有限责任公司 <span class="tag risk">中风险</span></b>
+        <p class="note" style="margin-top:6px">33 年镇属改制老主体，无失信、无被执行、无出质、无处罚；但工商穿透为境内自然人持股，与挂牌所称"香港公司股权交易"口径不一致——签约前须以查册与工商内档为正。挂牌页虽已下架，主体与资产已核实，可直接接洽。阅读完整子报告 →</p>
+      </a>
+      <a class="card tight" href="reports/report-guangtianlu.html" target="_blank" style="display:block;border-left:4px solid var(--amber)">
+        <b>D5 · 松岗广田路 52 亩独院园区 — 标的级核查（主体待解锁）<span class="tag risk">中风险 · 待解锁</span></b>
+        <p class="note" style="margin-top:6px">挂牌参数与区位、交通、旧改、回报测算已逐项核查：24127㎡ 报价 2 亿属价格带中位，空置状态利于即买即用；但中介房源未披露业主，股权过户结构下主体核查是出价前的绝对前提。阅读完整子报告 →</p>
+      </a>
+    </div>
+    <p class="note" style="margin-top:12px">子报告与主报告共用同一套信源分级与事实/解读分离体例，核查数据来自天眼查开放平台接口并经财新企业库失信名单交叉验证，核查时点均为 2026-09-27。天眼查、财新为第三方商业数据库，所录为登记与公示信息镜像，产权、抵押、查封的最终状态以不动产登记中心查册为准。</p>
+  </div>
+</section>
+<section id="market">
+  <div class="wrap rv">
+    <div class="secno">MARKET ANALYSIS</div>
+    <h2>03 · 市场分析：买方市场下的三层价格体系</h2>
+    <p class="lede">本章回答三个问题：深圳厂房现在贵不贵、租金能收多少、为什么是买方市场。核心判断：深圳厂房市场已分化为"政府价、一手价、二手价"三层体系，三者价差最高达三倍，买方的核心能力是在正确的层级里用正确的锚谈判。</p>
+
+    <h3>3.1 三层价格体系与实测成交锚</h3>
+    <div class="grid g3">
+      <div class="card tight fact"><b>政府主导层：7500–15000 元/㎡。</b>"工业上楼"与优质产业空间项目备案价区间，分布在宝安、龙华、光明 <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。门槛是产业准入与自用承诺。</div>
+      <div class="card tight fact"><b>市场化一手层：15000–30000 元/㎡报价带。</b>上市公司 2026 年在宝安万丰购置新建厂房的披露单价为 15000–17000 元/㎡，是一手新建高标物业的真实成交上沿 <a href="https://pdf.dfcfw.com/pdf/H2_AN202603051820306182_1.pdf?1772735232000.pdf" target="_blank">[S23]</a>。</div>
+      <div class="card tight fact"><b>二手存量层：5000–9000 元/㎡成交带。</b>原关外二手厂房成交价集中区间 <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。本报告标的库中的光明、松岗二手园区挂牌价正落在该区间上沿。</div>
+    </div>
+    <div style="height:20px"></div>
+    <div class="chartbox">
+      <div class="q">这张图回答：六个价格口径放在一起，价差有多大？</div>
+      <div class="how">读法：每根浅蓝色竖条是该口径的价格区间，条越高越贵。绿色菱形是全市实测成交均价 7320 元/㎡。可见二手挂牌主力带（6000–12000）的中枢就在实测均价附近，而市场化一手报价带（15000–30000）是其二至四倍。面积需求超过 2万㎡ 的买家，二手整园几乎是唯一可落地的层级。</div>
+      <div id="chartBands" class="chart"></div>
+    </div>
+
+    <h3>3.2 租金基准与回报测算</h3>
+    <div class="card fact"><b>事实：</b>松岗厂房租赁挂牌主流为 16–28 元/㎡/月 <a href="http://sz.zhaoshang800.com/cf/a440306000b440306024c1/" target="_blank">[S13]</a>；光明市场化低标厂房 12–20 元/㎡/月，国资园区公开招租底价 33–37 元/㎡/月 <a href="https://gzw.sz.gov.cn/ztzl/gzgqztzl/zczl/zlyw/content/post_12085753.html" target="_blank">[S20]</a> <a href="http://mp.weixin.qq.com/s?__biz=MjM5MDc1MjIxMQ==&mid=2649653189&idx=4&sn=8fe8d94928a0e8653ef2cf5cad2f0ad9" target="_blank">[S21]</a>。两宗松岗在售标的自述年租金分别为 500 万元（对应总价 8500 万）与约 1000 万元（对应总价 2.38 亿）<a href="https://www.shangpu99.com/gccsdetail/id/1334.html" target="_blank">[S6]</a> <a href="https://sz.zhaoshang800.com/cf/a23948136.html" target="_blank">[S11]</a>（S11 挂牌页已于 2026-09-27 实测下架，此处为存档口径）。</div>
+    <div style="height:16px"></div>
+    <div class="card view"><b>解读：</b>两宗标的的隐含毛租金回报率分别为约 5.9% 与约 4.2%，与深圳工业物业 4%–6% 的常态回报区间吻合。对自用型买家，该回报率即是"买 vs 租"的换算基准：按 2万㎡、28 元/㎡/月计，年租金约 672 万元，相当于每持有约 17 年的租金可覆盖一次 8000 元/㎡ 的购置成本。租金流真实性须以银行流水与完税凭证核验，挂牌自述口径不可直接采信。</div>
+    <div style="height:16px"></div>
+    <div class="chartbox">
+      <div class="q">这张图回答：两地租金水平与两宗标的自述回报是否自洽？</div>
+      <div class="how">读法：金色柱为松岗口径，蓝色柱为光明口径，绿色柱为两宗在售标的的自述等效租金。绿色柱落在金色与蓝色之间，说明卖方自述租金未明显偏离市场报价带，具备初步可信度，但仍须流水核验。</div>
+      <div id="chartRent" class="chart"></div>
+    </div>
+
+    <h3>3.3 供需与流动性</h3>
+    <div class="grid g2">
+      <div class="card tight fact"><b>事实：</b>2024 年第四季度厂房成交均价环比下跌 9%，当季去化 9.38 万㎡、环比上涨 56%；截至 2024 年末西部片区（宝安、光明合计口径）库存 50 万㎡ <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。2025 年深圳厂房整体空置率预估 12%–18%，显著低于写字楼 <a href="http://www.honghengtai.com/hangye/291.html" target="_blank">[S25]</a>。</div>
+      <div class="card tight fact"><b>事实：</b>2026 年上半年深圳大宗交易中工业厂房成交金额占比约 50%，居各业态首位；具备稳定现金流的产业资产成为实体企业、民营投资者与村股份公司的首选配置 <a href="https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifveam1854940.shtml" target="_blank">[S16]</a>。</div>
+      <div class="card tight view"><b>解读：</b>价跌量升是典型的以价换量出清结构，买方掌握着谈判主动权；而大宗资金持续流入厂房业态，意味着优质红本标的的底部承接力量真实存在，卖方恐慌性抛售的概率低，指望"骨折价"并不现实。合理的预期是：贴近实测均价成交，用产权瑕疵、租约短期化、付款节奏换取额外折扣。</div>
+      <div class="card tight view"><b>解读：</b>写字楼市场 2026 年上半年空置率 24.9%–29.1%、租金十年下跌约 40% 的对照组表明 <a href="http://www.eeo.com.cn/2026/0707/947277.shtml" target="_blank">[S17]</a> <a href="https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifveam1854940.shtml" target="_blank">[S16]</a>，深圳产业物业内部也在分化，资金从商办撤离转向厂房。购入厂房本质上是买入制造业空间稀缺性，而非买入地产行情。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 政策制度 ================= -->
+<section id="policy">
+  <div class="wrap rv">
+    <div class="secno">POLICY & RULES</div>
+    <h2>04 · 政策与制度：四级规则全景</h2>
+    <p class="lede">按"市—区—街道/微观"的效力层级展开。蓝色"事实"卡片为法规原文要点并附原文链接；红色"解读"卡片为基于条文对本次购置的影响分析。</p>
+
+    <h3>4.1 深圳市层面：交易的宪法</h3>
+    <div class="grid g2">
+      <div class="card fact"><b>《深圳市工业及其他产业用地供应管理办法》，深府规〔2026〕4 号，2026 年 4 月印发</b> <a href="https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html" target="_blank">[S14]</a><br>工业用地出让原则不超过 30 年，实行弹性年期与先租后让；重点产业项目用地原则不得转让；一般产业项目用地约定不得转让的可补缴地价变更为整体转让；转让须经土地二级市场平台进行；申报价低于市场价 20% 以上的，区政府可行使优先购买权；开发投资未达 25% 的实行"先投入后转让"预告登记。</div>
+      <div class="card fact"><b>《深圳市工业楼宇及配套用房转让管理办法》，2025 年 1 月延期有效</b> <a href="https://www.sz.gov.cn/zfgb/2025/gb1360/content/post_11980017.html" target="_blank">[S18]</a><br>工业楼宇受让人须为依法注册的企业，个人不得受让；一级工业区块线内还须符合产业准入；出让合同未约定可分割的，原则只能以宗地为单位整体转让；破产清算与法院强制执行为分割转让的法定例外；工业配套宿舍的买方须为同区持有厂房 1000㎡ 以上的企业。</div>
+      <div class="card view"><b>解读一：</b>整体转让规则直接塑造了松岗的供给形态。早期出让合同普遍未约定分割条款，因此二手园区只能整园或整股出售，2万㎡ 级整园标的正是这一制度的产物。对买家这是利好：卖方无法拆零零售，整园议价对手少。</div>
+      <div class="card view"><b>解读二：</b>优先购买权条款构成议价的制度下限。申报价低于市场价 20% 以上将触发区政府优先购买，意味着"超低价捡漏"在深圳工业用地二级市场已被制度性封堵。谈判目标区间建议控制在挂牌价的 75%–85%，既充分利用买方市场，又不触碰政府回购线。</div>
+    </div>
+
+    <h3>4.2 产业导向层面：空间政策总盘子</h3>
+    <div class="grid g2">
+      <div class="card fact"><b>深圳"20+8"产业政策 2026 年升级 3.0 版。</b>2025 年战略性新兴产业增加值 1.67 万亿元，占 GDP 比重 43.0%；2026 年目标增长 7% 以上 <a href="https://stcn.com/article/detail/3635428.html" target="_blank">[S33]</a>。</div>
+      <div class="card fact"><b>20 大先进制造业园区空间布局规划。</b>全市规划 20 个先进制造业园区约 300–333 平方公里，其中宝安 4 个、光明 4 个；2022–2035 年园区内计划释放工业用地约 59–60 平方公里 <a href="https://gxj.sz.gov.cn/xxgk/xxgkml/qt/tzgg/content/post_9861069.html" target="_blank">[S32]</a> <a href="https://stic.sz.gov.cn/attachment/1/1532/1532588/11937146.pdf" target="_blank">[S31]</a>。</div>
+      <div class="card view"><b>解读：</b>两区均被纳入先进制造业园区体系，意味着两点：其一，政府将持续在园区内存量土地整备上投放资源，周边配套确定性高；其二，园区内工业用地的产业准入审查趋严，购置前须向区产业部门确认拟入行业是否在准入目录内。</div>
+      <div class="card fact"><b>土地整备节奏实证。</b>宝安区 2025 年完成土地整备 203.8 公顷，其中产业用地整备 85.8 公顷居全市第二 <a href="http://sz.people.com.cn/BIG5/n2/2026/0116/c202846-41474518.html" target="_blank">[S36]</a>；光明区 2025 年新增入库产业用地 28.26 公顷、新供应 14.81 公顷，筹集高品质产业空间超 200 万㎡ <a href="https://www.szgm.gov.cn/xxgk/xqgwhxxgkml/ghjh_116525/fzgh/content/post_12779229.html" target="_blank">[S37]</a>。</div>
+    </div>
+
+    <h3>4.3 区级层面：光明与宝安的差异化政策</h3>
+    <div class="grid g2">
+      <div class="card fact"><b>光明区购房补贴。</b>上年度产值（营收）超 3 亿元或财力贡献超 2000 万元的企业，购买区内新建可分割厂房达 1万㎡ 并承诺 5 年不租售的，按成交价 10%、分三年给予累计最高 3000 万元补贴；租赁补贴为 15–20 元/㎡/月 <a href="http://mp.weixin.qq.com/s?__biz=MzIwMjg0MDk5NQ==&mid=2247517592&idx=6&sn=0c0bd6db92f4e6b431bf854e3db5d34b" target="_blank">[S22]</a>。</div>
+      <div class="card fact"><b>光明区 2025 年经济基本面。</b>GDP 同比增长 6.5%，规上工业增加值增长 7.5%，国家高新技术企业 2273 家，独角兽企业 2 家、潜在独角兽 14 家 <a href="https://www.szgm.gov.cn/xxgk/xqgwhxxgkml/ghjh_116525/fzgh/content/post_12779229.html" target="_blank">[S37]</a>。</div>
+      <div class="card view"><b>解读：</b>光明的补贴政策存在明确的对赌结构：3000 万元封顶补贴绑定 5 年持有承诺与营收门槛。若企业营收达标且确定长期自用，光明一手分层盘的实际购置成本可再降约一成，8300 元/㎡ 的入门价扣除补贴后接近二手独院水平，这是光明相对松岗的独特筹码。宝安区未见同等级购房补贴公开政策，松岗标的的竞争力完全体现在单价与物业形态上。</div>
+      <div class="card fact"><b>光明一手供地参照。</b>深土交告〔2026〕13 号，光明马田 A628-0047 宗地占地约 1 万㎡、建面 2.5 万㎡，2026 年 4 月 30 日由科发济世生物以起始价 1170 万元竞得，综合楼面单价 468 元/㎡，准入行业为医药制造，年限 20 年 <a href="https://new.szggzy.com/mobile/jygg/landOre.html?packageId=0532bce22fce4207849d1de9c2336552&mode=%E6%8C%82%E7%89%8C&landNo=A628-0047" target="_blank">[S15]</a> <a href="https://www.guandian.cn/article/20260430/558839.html" target="_blank">[S50]</a>；2026 年 8 月，一家上市公司公告中标光明两宗合计约 2.1 万㎡ 地块用于制造及办公 <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800010_c.pdf" target="_blank">[S26]</a>。</div>
+    </div>
+
+    <h3>4.4 街道与微观层面：旧改拆迁的双刃剑</h3>
+    <div class="grid g2">
+      <div class="card fact"><b>松岗旧改进展实录。</b>平岗工业区城市更新单元，拆除范围约 8.3 万㎡，更新方向为普通工业用地与新型产业用地，2020 年公示以来已三次延期至 2027 年 8 月 <a href="http://www.baoan.gov.cn/bacsgxj/gkmlpt/content/11/11520/mpost_11520754.html" target="_blank">[S38]</a> <a href="http://news.szhome.com/393977.html" target="_blank">[S39]</a>；松岗商业中心、溪头第一二工业区等大型更新单元处于规划修改阶段，溪头项目规划容积达 70 万㎡ <a href="https://m.haofangdp.com/dianping/ReviewDetail?id=7507626433998157559" target="_blank">[S40]</a>；松岗街道在新一轮城市总规中被纳入"西部中心"定位 <a href="http://ibaoan.sznews.com/content/2019-03/11/content_21461436.htm" target="_blank">[S41]</a>。</div>
+      <div class="card view"><b>解读：拆迁是松岗二手厂房最大的隐性变量，方向双向。</b>若标的位于已立项的更新单元拆除范围内，可能获得远超重置成本的补偿，也可能面临清租停产与长期不确定性；平岗等项目的反复延期说明松岗旧改推进缓慢，短期 3–5 年内大规模拆迁概率低。签约前须在宝安区城市更新和土地整备局逐项核查标的是否落入更新单元、土地整备利益统筹范围或市政征收红线。光明侧为新建城区，存量厂房楼龄短，拆迁风险显著低于松岗。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 区位动态 ================= -->
+<section id="location">
+  <div class="wrap rv">
+    <div class="secno">LOCATION & MOMENTUM</div>
+    <h2>05 · 区位与动态：交通红利与交通包袱</h2>
+    <p class="lede">厂房估值的半壁江山是区位。以下按正面、负面分列两地正在兑现与持续存在的区位变量，全部附信源。</p>
+    <div class="posneg">
+      <div class="card pos">
+        <h3 style="margin-top:0">✅ 正面：已兑现与在建红利</h3>
+        <ul class="ck">
+          <li><b>光明：地铁 13 号线二期北延段 2026 年 6 月 28 日通车。</b>上屋至李松蓢 11 站，光明科学城至南山科技园通勤缩至约 45 分钟 <a href="https://finance.sina.cn/2026-03-30/detail-inhsuefa2771935.d.html?vt=4" target="_blank">[S27]</a> <a href="https://www.szmc.net/szmc_m/home/xinweenzhongxin/gonggaoxinwen/202606/105965.html" target="_blank">[S29]</a>。数字智造产业园所在的李松蓢片区即为终点站点。</li>
+          <li><b>松岗：地铁 12 号线二期 2025 年 12 月底通车。</b>海上田园东至松岗 6 站，松岗站实现 6 号线、11 号线、12 号线三线换乘 <a href="https://static.nfnews.com/content/202410/24/c10192706.html?enterColumnId=75" target="_blank">[S28]</a>。</li>
+          <li><b>松岗：广深高速深圳段改扩建已获批在建。</b>总投资 214.33 亿元，双向六车道扩至十车道，改造松岗南枢纽互通并新增松福大道互通 <a href="https://www.sznews.com/news/content/2025-02/09/content_31461747.htm" target="_blank">[S42]</a> <a href="http://sz.people.com.cn/n2/2025/0205/c202846-41126919.html" target="_blank">[S43]</a>。官方测算松岗车辆接入高速绕行减少约 8 公里，至福田通勤缩短约 40% <a href="https://static.nfnews.com/content/202509/11/c11713724.html?enterColumnId=0" target="_blank">[S30]</a>。</li>
+          <li><b>光明：科学城产业集聚。</b>合成生物企业超 150 家、脑科学企业 80 家，2025 年新引进世界 500 强项目 6 个 <a href="https://www.szgm.gov.cn/xxgk/xqgwhxxgkml/ghjh_116525/fzgh/content/post_12779229.html" target="_blank">[S37]</a>。</li>
+        </ul>
+      </div>
+      <div class="card neg">
+        <h3 style="margin-top:0">⚠️ 负面：现实包袱与时间表风险</h3>
+        <ul class="ck">
+          <li><b>107 国道宝安段拥堵是长期现实。</b>该路串联松岗等 8 个街道，客货混行、过境货运量大，市政化改造 2015 年立项后迟迟未全面动工，须待地铁 20 号线二期、26 号线启动后同步实施 <a href="https://huacheng.gz-cmc.com/pages/2020/06/02/5da4e37fa8334624aea6d9aae505b41b.html" target="_blank">[S44]</a>。2025 年 12 月官方口径为"陆续推进"，无明确通车时间表 <a href="https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12567491.html" target="_blank">[S45]</a>。</li>
+          <li><b>广深高速饱和与施工期阵痛。</b>现状日均车流超 60 万车次，改扩建施工期间将有匝道改道等管制 <a href="http://news.szhome.com/393198.html" target="_blank">[S46]</a>；穗莞段预计 2027 年底方具备通车条件，红利兑现有 1–2 年滞后期。</li>
+          <li><b>松岗旧改推进缓慢。</b>大型更新单元反复延期甚至失效 <a href="http://news.szhome.com/393977.html" target="_blank">[S39]</a>，片区城市界面改善慢于规划预期；对购置二手厂房者，这既是拆迁风险低的好消息，也是界面升级慢的坏消息。</li>
+          <li><b>光明部分二手标的交通依赖高速。</b>公明、马田片区距地铁 6 号线站点普遍 1–3 公里，货运依赖龙大、南光高速，早高峰出入口拥堵常见，须实地踩点验证。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 尽调 ================= -->
+<section id="dd">
+  <div class="wrap rv">
+    <div class="secno">DUE DILIGENCE</div>
+    <h2>06 · 尽调清单与交易风险</h2>
+    <p class="lede">非标物业交易，尽调决定成败。以下清单按产权、交易、经营三个维度展开，每项均注明制度依据。</p>
+    <div class="grid g3">
+      <div class="card">
+        <h3 style="margin-top:0">产权核验</h3>
+        <ul class="ck">
+          <li>不动产登记中心查册：权利性质、剩余年限、抵押查封、共有情况。松岗标的普遍为 1999–2049 年产权，剩余约 23 年，续期规则尚无明确政策，是估值的最大长期变量 <a href="https://www.shangpu99.com/gccsdetail/id/1334.html" target="_blank">[S6]</a>。</li>
+          <li>调取土地出让合同原件：确认是否约定"不得转让""限自用""非商品性质"。合同约定优先于一般规则 <a href="https://www.sz.gov.cn/zfgb/2025/gb1360/content/post_11980017.html" target="_blank">[S18]</a>。</li>
+          <li>股权交易型标的须做公司全维度尽调：历史负债、对外担保、税务、劳动纠纷。恒兆标的为香港公司股权交易且须在香港付款 <a href="https://sz.zhaoshang800.com/cf/a23948136.html" target="_blank">[S11]</a>（挂牌页已下架，存档口径），跨境结构另涉外汇与税务安排。</li>
+          <li>排除"地有红本、房无产权"结构，此类物业无法独立登记过户 <a href="https://www.shangpu99.com/gccsdetail/id/1092.html" target="_blank">[S5]</a>。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">交易合规</h3>
+        <ul class="ck">
+          <li>受让主体须为注册企业；一级工业区块线内标的须先通过区产业部门准入审核 <a href="https://www.sz.gov.cn/zfgb/2025/gb1360/content/post_11980017.html" target="_blank">[S18]</a>。</li>
+          <li>转让须经土地二级市场平台申报；申报价低于市场价 20% 以上触发区政府优先购买权 <a href="https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html" target="_blank">[S14]</a>。</li>
+          <li>税费路径二选一测算：产权交易涉及增值税及附加、土地增值税、契税；股权交易涉及所得税与目标公司历史税负。中介惯用"实收"报价，税费另计部分可达数百万元级，须在报价函中书面锁定。</li>
+          <li>核查标的是否落入城市更新单元、土地整备或市政征收范围 <a href="http://news.szhome.com/393977.html" target="_blank">[S39]</a> <a href="http://www.baoan.gov.cn/bacsgxj/gkmlpt/content/11/11520/mpost_11520754.html" target="_blank">[S38]</a>。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">经营核验</h3>
+        <ul class="ck">
+          <li>带租约标的核验租金流水、完税凭证与剩余租期，买卖不破租赁。松岗两宗标的自述租约至 2026 年底到期 <a href="https://www.shangpu99.com/gccsdetail/id/1334.html" target="_blank">[S6]</a>，购入后即有重新定价机会。</li>
+          <li>环评与消防：挂牌标注"可办环评"不等于已办。重污染工艺须预审环评可行性；消防验收与主体消防记录须逐项查验。</li>
+          <li>工程参数按产线核对：层高、楼面荷载、柱距、配电容量、货梯吨位。松岗单层 9–11 米层高物业适合仓储物流与重工业 <a href="https://www.shangpu99.com/gccsdetail/id/1487.html" target="_blank">[S7]</a>，光明一手高标厂房首层 8 米、荷载 2 吨 <a href="https://www.sohu.com/a/1005778629_122618451" target="_blank">[S1]</a>。</li>
+          <li>法拍备选渠道：阿里拍卖深圳站不定期出现整园标的，折价常为市场价七至八成，但须自担租约、欠费与登记风险 <a href="https://sf.taobao.com/item_list.htm?category=50025969&auction_source=0&city=%C9%EE%DB%DA&st_param=1&auction_start_seg=-1" target="_blank">[S24]</a>。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 证据链 ================= -->
+<section id="chain">
+  <div class="wrap rv">
+    <div class="secno">EVIDENCE CHAIN</div>
+    <h2>07 · 核心结论的证据链</h2>
+    <p class="lede">第一章的四条结论与第三章的市场判断，在此逐条展开推导过程与支撑信源。圆点标注该条证据组合的可信度：绿点为高可信，黄点为中可信，红点为线索级。</p>
+    <div id="chains"></div>
+  </div>
+</section>
+
+<!-- ================= 信源 ================= -->
+<section id="sources">
+  <div class="wrap rv">
+    <div class="secno">SOURCE REGISTER</div>
+    <h2>08 · 信源登记表</h2>
+    <p class="lede">本报告引用的全部公开信源。等级含义见卷首阅读指南。所有链接均于 2026 年 9 月 27 日经浏览器逐条实际访问复验：原挂牌页已失效（404）且无其他渠道旁证的标的（13483㎡ 独院、17000㎡ 厂房、塘下涌园区）已从标的库与本表删除；恒兆工业区挂牌页（S11）虽已下架，但主体经工商尽调核实，保留为存档引用并标注；规自局两条原链接（深土交告〔2026〕13 号、平岗旧改公示）已失效，分别替换为深圳公共资源交易中心官方交易页与宝安区政府官方公告。</p>
+    <div class="tblwrap"><table id="stable">
+      <thead><tr><th>编号</th><th>信源与页面</th><th>等级</th><th>时点</th><th>支撑内容</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>深圳光明区 × 宝安松岗工业物业购置研究报告 · 编制日期 2026 年 9 月 27 日 · 基于公开信源编制，供购置决策参考。挂牌信息均为报价口径，交易前请完成产权查册与独立评估。</p>
+  </div>
+</footer>
+<script>
+/* ============ 数据层 ============ */
+const LISTINGS = [
+ {area:"松岗", name:"广田路独门独院工业园，约52亩", bldg:24127, price:20000, unit:8290, cert:"红本", form:"股权过户 · 整体", key:"单层厂房层高9.2–11米，适合物流仓储；宿舍5976㎡；目前空置；产权至2055年4月；已出尽调子报告 D5", src:"S7", time:"2025-12 挂牌", size:"in", st:"live"},
+ {area:"松岗", name:"松岗红本工业园，带租约", bldg:12041, price:8500, unit:7059, cert:"红本", form:"整体", key:"年租金约500万，隐含回报约5.9%；租约至2026年底；1公里内天虹、联投东方商圈", src:"S6", time:"2025-08 挂牌", size:"out", st:"live"},
+ {area:"宝安", name:"宝安独门独院红本园区（街道待核实）", bldg:20000, price:13500, unit:6750, cert:"红本", form:"股权交易 · 整体", key:"占地15000㎡；3栋厂房+3栋宿舍；自述年租金900万；⚠ 使用年限1988–2038，剩余约12年，估值须按短年期重算；具体所在街道须向中介核实", src:"S49", time:"2026-09 挂牌", size:"in", st:"live"},
+ {area:"光明", name:"主干道第一排红本工业园独院", bldg:42000, price:37800, unit:9000, cert:"红本", form:"整体", key:"4.2万㎡独院；国道旁；中工招商网在挂", src:"S12", time:"2026-09 在挂", size:"out", st:"live"},
+ {area:"光明", name:"国有证高标厂房，带无尘车间", bldg:40000, price:24000, unit:6000, cert:"红本", form:"整体", key:"国有证；空地大；适合重工业与仓储", src:"S12", time:"2026-09 在挂", size:"in", st:"live"},
+ {area:"光明", name:"国有证工业园，成熟地段", bldg:30000, price:19500, unit:6500, cert:"红本", form:"整体", key:"同片区多宗3万㎡级国有证独院在挂，价格带6000–7500元/㎡", src:"S12", time:"2026-09 在挂", size:"in", st:"live"},
+ {area:"光明", name:"⚠ 5万㎡工业用地含2万㎡厂房", bldg:20000, price:13000, unit:6500, cert:"瑕疵", form:"整体，需招外挂", key:"土地有红本但厂房未办理产权登记，无法独立过户，仅作对照样本", src:"S5", time:"2025-03 挂牌", size:"in", st:"live"},
+ {area:"光明", name:"光明科兴科学园，一手玉塘长圳", bldg:7000, price:8750, unit:12500, cert:"红本", form:"一手分层，可整栋", key:"50年红本M1；6号线长圳站400米；单套1297–7000㎡；顶层14500元/㎡送花园；整盘计容24万㎡；尽调子报告 D1", src:"S3", time:"2025-12 在售", size:"combo", st:"live"},
+ {area:"光明", name:"光明数字智造产业园，一手公明李松蓢", bldg:4600, price:3818, unit:8300, cert:"红本", form:"一手分层，可整栋", key:"高标M1现楼；单套1753–4600㎡；首层8米荷载2吨；使用率88%；厂房总量9.3万㎡可组合；尽调子报告 D2", src:"S1", time:"2026 在售", size:"combo", st:"live"},
+ {area:"光明", name:"圳发云谷大厦，一手分层", bldg:1200, price:1620, unit:13500, cert:"红本", form:"一手分层，一层一证", key:"50年独立红本；整层约1200㎡；荷载0.8吨；生产研发办公兼容；尽调子报告 D3", src:"S4", time:"在售", size:"combo", st:"live"},
+ {area:"松岗", name:"松岗公园地铁旁独栋园区", bldg:16139, price:12000, unit:7435, cert:"红本", form:"产权交易", key:"近6号线松岗公园站；厂房两栋12276㎡+宿舍两栋；产权1999–2049；⚠ 挂牌发布于 2024-06，超过一年，在售状态须复核", src:"S10", time:"2024-06 挂牌 · 待核", size:"out", st:"verify"},
+ {area:"松岗", name:"松岗单层10米层高独院", bldg:10754, price:9800, unit:9113, cert:"红本", form:"整体，实收口径", key:"单层厂房层高10米可加隔层；市场租金38–45元/㎡/月；产权1999–2049；⚠ 挂牌发布于 2023-07，在售状态须复核", src:"S8", time:"2023-07 挂牌 · 待核", size:"out", st:"verify"},
+ {area:"松岗", name:"107国道红本独院工业园", bldg:35785, price:43000, unit:12016, cert:"红本", form:"整体 · 16本产权证", key:"占地34817㎡；107国道旁；⚠ 仅 2023 年视频房源佐证，无实时挂牌页，物业实体大概率仍在但在售状态与报价须重新核实", src:"S9", time:"2023 视频房源 · 待核", size:"in", st:"verify"},
+ {area:"松岗", name:"洪桥头恒兆工业区整厂", bldg:24640, price:23800, unit:9657, cert:"红本", form:"香港公司股权交易", key:"⚠ 挂牌页已下架；但主体经工商穿透核查真实存在、资产与信用记录已尽调（见 D4 子报告），属「下架但可溯源」标的，可直接接洽业主；21本证无抵押、年租约1000万为存档口径", src:"S11", time:"已下架 · 主体已核实", size:"in", st:"gone"},
+];
+
+const SOURCES = [
+ ["S1","搜狐 · 光明数字智造产业园在售详情","B","2026-04","光明一手8300元/㎡起、现楼、工程参数","https://www.sohu.com/a/1005778629_122618451"],
+ ["S2","网易 · 同项目二次佐证","B","2026-05","与S1参数交叉一致","https://c.m.163.com/news/a/KTNB07580556GRXO.html"],
+ ["S3","网易 · 光明科兴科学园在售","B","2025-12","12500元/㎡起、50年红本M1、长圳站400米","https://c.m.163.com/news/a/KI4B043K05568XNR.html"],
+ ["S4","久久厂房网 · 圳发云谷","C","2024-07","光明一手分层13500元/㎡起","https://www.99cfw.com/sz/changfang/zsryuysyrrntxw.html"],
+ ["S5","指点网 · 光明2万㎡厂房瑕疵对照样本","B","2025-03","地有红本、房无产权的结构实例","https://www.shangpu99.com/gccsdetail/id/1092.html"],
+ ["S6","指点网 · 松岗1.2万㎡红本园区","B","2025-08","报价8500万、年租500万、租约至2026年底","https://www.shangpu99.com/gccsdetail/id/1334.html"],
+ ["S7","指点网 · 松岗广田路52亩园区","B","2025-12","报价2亿、空置、层高9.2–11米","https://www.shangpu99.com/gccsdetail/id/1487.html"],
+ ["S8","指点网 · 松岗1.08万㎡单层厂房","B","2023-07","9800万实收、层高10米","https://www.shangpu99.com/gccsdetail/id/463.html"],
+ ["S9","哔哩哔哩 · 松岗107国道园区视频房源（⚠ 2023 年发布，无实时挂牌页，在售状态待核）","C","2023 视频","35785㎡、16本证、报价4.3亿","https://www.bilibili.com/video/BV1s14y1z7gR/"],
+ ["S10","指点网 · 松岗地铁旁1.6万㎡园区","C","2024-06","报价1.2亿、6号线松岗公园站","https://www.zhidianjob.com/gccsdetail/id/870.html"],
+ ["S11","中工招商网 · 松岗恒兆工业区整厂（❌ 挂牌页已下架，2026-09-27 实测 404，存档引用）","C","已下架","报价2.38亿、21本证、年租约1000万、香港股权交易","https://sz.zhaoshang800.com/cf/a23948136.html"],
+ ["S12","中工招商网 · 光明厂房出售列表页","C","2026-09 实时","光明在挂结构与6000–9000元/㎡主力带","http://sz.zhaoshang800.com/cf/a440311000c2/"],
+ ["S13","中工招商网 · 松岗厂房租赁列表页","C","2026-09 实时","松岗租金16–28元/㎡/月","http://sz.zhaoshang800.com/cf/a440306000b440306024c1/"],
+ ["S14","深圳市政府 · 工业及其他产业用地供应管理办法（深府规〔2026〕4号）","S","2026-04","弹性年期、二级市场、优先购买权","https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html"],
+ ["S15","深圳公共资源交易中心 · 深土交告〔2026〕13号 A628-0047 出让公告与成交结果","S","2026-03/04","光明马田工业地1170万成交、楼面单价468元/㎡","https://new.szggzy.com/mobile/jygg/landOre.html?packageId=0532bce22fce4207849d1de9c2336552&mode=%E6%8C%82%E7%89%8C&landNo=A628-0047"],
+ ["S16","新浪财经 · 戴德梁行2026上半年深圳市场","A","2026-07","大宗交易厂房占比约50%","https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifveam1854940.shtml"],
+ ["S17","经济观察网 · 仲量联行2026上半年回顾","A","2026-07","写字楼空置率24.9%对照组","http://www.eeo.com.cn/2026/0707/947277.shtml"],
+ ["S18","深圳市政府 · 工业楼宇及配套用房转让管理办法（延期）","S","2025-01","受让资格与整体转让规则","https://www.sz.gov.cn/zfgb/2025/gb1360/content/post_11980017.html"],
+ ["S19","深圳国资评估机构 · 工业物业市场调研报告","A","2025-09","2024Q4成交均价7320元/㎡、库存与去化","http://www.cngzy.com/upload/202509/15/202509150946183840.pdf"],
+ ["S20","深圳国资委 · 国企资产公开招租","S","2025-03","光明尚智科技园招租底价42元/㎡/月","https://gzw.sz.gov.cn/ztzl/gzgqztzl/zczl/zlyw/content/post_12085753.html"],
+ ["S21","深圳联交所 · 光明欧菲科技园招租","A","2025-04","光明厂房招租底价33–37元/㎡/月","http://mp.weixin.qq.com/s?__biz=MjM5MDc1MjIxMQ==&mid=2649653189&idx=4&sn=8fe8d94928a0e8653ef2cf5cad2f0ad9"],
+ ["S22","光明区高品质产业空间措施（深光府规〔2024〕3号）","B","2024","购房补贴10%封顶3000万、租赁补贴15–20元","http://mp.weixin.qq.com/s?__biz=MzIwMjg0MDk5NQ==&mid=2247517592&idx=6&sn=0c0bd6db92f4e6b431bf854e3db5d34b"],
+ ["S23","新睿电子IPO问询回复（中伦律所意见，东方财富PDF）· 宝安购置厂房披露","A","2026-03","宝安万丰新建厂房单价口径1.5–1.7万/㎡","https://pdf.dfcfw.com/pdf/H2_AN202603051820306182_1.pdf?1772735232000.pdf"],
+ ["S24","阿里拍卖 · 深圳工业标的列表","B","2026","福永、观澜整园法拍案例","https://sf.taobao.com/item_list.htm?category=50025969&auction_source=0&city=%C9%EE%DB%DA&st_param=1&auction_start_seg=-1"],
+ ["S25","宏恒泰 · 2025深圳厂房空置率分析","C","2025-07","空置率12%–18%预估","http://www.honghengtai.com/hangye/291.html"],
+ ["S26","港交所公告 · 上市公司中标光明两宗地","A","2026-08","光明一手供地实证","https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0828/2026082800010_c.pdf"],
+ ["S27","新浪财经 · 13号线二期北延年内通车","B","2026-03","光明至南山45分钟、2026年内开通","https://finance.sina.cn/2026-03-30/detail-inhsuefa2771935.d.html?vt=4"],
+ ["S28","南方+ · 12号线二期年底开通松岗三线换乘","B","2024-10","松岗站6/11/12号线换乘","https://static.nfnews.com/content/202410/24/c10192706.html?enterColumnId=75"],
+ ["S29","深圳地铁官网 · 13号线二期北延通车公告","A","2026-06","2026年6月28日通车实证","https://www.szmc.net/szmc_m/home/xinweenzhongxin/gonggaoxinwen/202606/105965.html"],
+ ["S30","南方+ · 广深高速改扩建松岗互通与通勤测算","B","2025-09","松福大道互通、通勤缩短约40%","https://static.nfnews.com/content/202509/11/c11713724.html?enterColumnId=0"],
+ ["S31","深圳科创委 · 工业区块线与产业空间规划文件","S","2022","2035年工业用地占比不低于20%","https://stic.sz.gov.cn/attachment/1/1532/1532588/11937146.pdf"],
+ ["S32","深圳工信局 · 20大先进制造业园区空间布局规划","S","2022-06","宝安4个、光明4个园区","https://gxj.sz.gov.cn/xxgk/xxgkml/qt/tzgg/content/post_9861069.html"],
+ ["S33","证券时报 · 深圳20+8政策3.0版","A","2026-02","战新产业增加值1.67万亿、占GDP 43%","https://stcn.com/article/detail/3635428.html"],
+ ["S34","安居客 · 光明厂房出售频道","B","实时","光明在售房源盯盘入口","https://m.anjuke.com/shenzhen/cf/shou/guangmingxinqu"],
+ ["S35","安居客 · 松岗厂房出售频道","B","实时","松岗在售房源盯盘入口","https://m.anjuke.com/sz/cf/shou/baoan-songgang/"],
+ ["S36","人民网 · 宝安2025土地整备答卷","S","2026-01","产业用地整备85.8公顷全市第二","http://sz.people.com.cn/BIG5/n2/2026/0116/c202846-41474518.html"],
+ ["S37","光明区政府 · 2025计划执行与2026计划","A","2026-05","GDP增6.5%、产业空间200万㎡","https://www.szgm.gov.cn/xxgk/xqgwhxxgkml/ghjh_116525/fzgh/content/post_12779229.html"],
+ ["S38","宝安政府在线 · 平岗工业区城市更新单元计划（延期）公告","S","2024-08","拆除8.3万㎡、M1/M0方向（规自局原公示页已失效，改用区政府官方公告）","http://www.baoan.gov.cn/bacsgxj/gkmlpt/content/11/11520/mpost_11520754.html"],
+ ["S39","深圳房地产信息网 · 宝安旧改失效与延期实录","B","2026-08","平岗三次延期、巨无霸旧改失效","http://news.szhome.com/393977.html"],
+ ["S40","克而瑞好房点评 · 松岗70万㎡旧改规划修改","B","2026-09","溪头第一二工业区更新动态","https://m.haofangdp.com/dianping/ReviewDetail?id=7507626433998157559"],
+ ["S41","深圳宝安网 · 松岗纳入西部中心定位","A","2019-03","潭头整村统筹、大田洋更新等布局","http://ibaoan.sznews.com/content/2019-03/11/content_21461436.htm"],
+ ["S42","深圳新闻网 · 广深高速深圳段改扩建获批214亿","A","2025-02","双向六车道扩十车道","https://www.sznews.com/news/content/2025-02/09/content_31461747.htm"],
+ ["S43","人民网 · 京港澳高速深圳段改扩建公示","S","2025-02","松岗南枢纽改造、新增松福大道互通","http://sz.people.com.cn/n2/2025/0205/c202846-41126919.html"],
+ ["S44","新花城 · 107国道市政化迟迟未动工的官方回应","B","2020-06","宝安段31.4公里客货混行拥堵","https://huacheng.gz-cmc.com/pages/2020/06/02/5da4e37fa8334624aea6d9aae505b41b.html"],
+ ["S45","深圳政府在线 · 宝安百千万工程进展","S","2025-12","107国道市政化陆续推进、无明确时间表","https://www.sz.gov.cn/cn/xxgk/zfxxgj/gqdt/content/post_12567491.html"],
+ ["S46","深圳房地产信息网 · 广深高速桥上桥施工进展","B","2026-04","日均车流超60万车次、施工管制","http://news.szhome.com/393198.html"],
+ ["S49","指点网 · 宝安2万㎡独门独院红本厂房","B","2026-09","建面2万㎡、报价1.35亿、自述年租900万、股权交易、年限1988–2038","https://www.shangpu99.com/gccsdetail/id/2111.html"],
+ ["S50","观点网 · 深圳4宗产业用地集中成交（光明3宗）","A","2026-04","A628-0047 成交价1170万实证，与S15互证","https://www.guandian.cn/article/20260430/558839.html"],
+];
+
+const CHAINS = [
+ {t:"结论一：松岗存在 2万–3.6万㎡ 红本独院园区供给，主力挂牌 6000–12000 元/㎡",
+  lv:"m", lvtxt:"中可信。标的真实存在概率高，价格与租约参数须查册与实地核验",
+  steps:["多宗独立标的分别来自指点网、中工招商网与视频平台，发布主体互不关联","面积、宗地信息、产权年限等参数互相独立且可互证","恒兆标的挂牌页虽已下架，但主体与资产经工商尽调核实真实存在（D4）；另两宗下架且无旁证的标的已从样本中删除，不进入证据链","挂牌单价带与评估机构公布的原关外二手成交价带 5000–9000 元/㎡基本衔接"],
+  srcs:["S6","S7","S9","S11","S19"]},
+ {t:"结论二：光明一手高标红本厂房 8300–14500 元/㎡，达 2万㎡ 需整栋组合",
+  lv:"m", lvtxt:"中可信。开发商广告口径，销控与底价须售楼处核实",
+  steps:["科兴科学园、数字智造产业园、圳发云谷三盘独立在售","同一项目在搜狐、网易、安居客多平台参数一致","上市公司在宝安购置新建厂房的监管披露单价 1.5–1.7 万/㎡构成一手价格的外部校准"],
+  srcs:["S1","S2","S3","S4","S34","S23"]},
+ {t:"结论三：买方市场成立，议价空间 10%–25%，制度下限为 20% 偏离线",
+  lv:"h", lvtxt:"高可信。机构实测数据与政府原文双重支撑",
+  steps:["评估机构实测 2024Q4 成交均价 7320 元/㎡且环比下跌 9%","同期挂牌主力带 6000–9000 元/㎡，价跌量升印证以价换量","政府原文规定申报价低于市场价 20% 以上区政府可优先购买"],
+  srcs:["S19","S12","S14"]},
+ {t:"结论四：两地交通红利均在兑现期，松岗另有旧改与 107 国道两项负面对冲",
+  lv:"h", lvtxt:"高可信。通车与工程进展均有官方信源",
+  steps:["13号线二期北延 2026 年 6 月通车有深圳地铁官方公告","12号线二期 2025 年底通车、松岗三线换乘有主流媒体报道","广深高速改扩建获发改委核准且松岗互通方案经人民网公示","107国道市政化无明确时间表有政府答复与官方通报互证"],
+  srcs:["S29","S28","S42","S43","S44","S45"]},
+ {t:"市场判断：租金回报 4%–6% 构成买租换算基准",
+  lv:"m", lvtxt:"中可信。挂牌租金属报价口径，须以真实流水为准",
+  steps:["松岗租赁挂牌 16–28 元/㎡/月来自实时列表页","两宗在售标的自述回报率分别约 5.9% 与约 4.2%，落在常态区间内","国资公开招租底价 33–37 元/㎡/月构成光明高标物业租金上沿参照"],
+  srcs:["S13","S6","S11","S20","S21"]},
+ {t:"制度判断：一手工业用地地价低廉但不可自由转让，不构成对二手红本的替代",
+  lv:"h", lvtxt:"高可信。政府出让公告与交易所披露原文",
+  steps:["光明马田宗地挂牌起始价折合楼面地价约 468 元/㎡，但绑定 20 年期与医药制造准入","监管协议与不得转让条款使该类物业不具备二级市场流动性","上市公司中标光明地块的港交所公告实证一手供地节奏与准入形态"],
+  srcs:["S15","S14","S26"]},
+];
+
+/* ============ 表格 ============ */
+const fmt=n=>n==null?"—":n.toLocaleString();
+const sizeTag=s=>s==="in"?'<span class="tag red">2万–4万㎡</span>':s==="combo"?'<span class="tag gray">可组合达标</span>':'<span class="tag gray">区间外</span>';
+const certTag=c=>c==="红本"?'<span class="tag red">红本</span>':'<span class="tag risk">产权瑕疵</span>';
+const stTag={live:'<span class="tag ok">在挂/在售</span>',verify:'<span class="tag gray">待核实</span>',gone:'<span class="tag risk">已下架</span>'};
+const stPrio={live:0,verify:1,gone:2};
+let sortK=null,asc=1;
+function render(){
+  const a=fArea.value,c=fCert.value,s=fSize.value,kw=fKw.value.trim();
+  let rows=LISTINGS.filter(l=>(!a||l.area===a)&&(!c||(c==="红本"?l.cert==="红本":l.cert!=="红本"))&&(!s||l.size===s)&&(!kw||(l.name+l.key+l.form).includes(kw)));
+  if(sortK)rows.sort((x,y)=>asc*((x[sortK]??0)-(y[sortK]??0)||String(x[sortK]).localeCompare(String(y[sortK]))));
+  else rows.sort((x,y)=>(stPrio[x.st]-stPrio[y.st])||((x.unit||9e9)-(y.unit||9e9)));
+  document.querySelector('#ltable tbody').innerHTML=rows.map(l=>{
+    const src=SOURCES.find(x=>x[0]===l.src);
+    return `<tr><td><span class="tag ${l.area==='光明'?'gm':'sg'}">${l.area}</span></td>
+      <td><b>${l.name}</b><br><span class="note">${l.form}</span></td>
+      <td>${fmt(l.bldg)}</td><td>${fmt(l.price)} 万</td><td><b>${fmt(l.unit)}</b></td>
+      <td>${certTag(l.cert)}${sizeTag(l.size)}</td>
+      <td style="min-width:230px">${l.key}</td>
+      <td class="src-mini">${stTag[l.st]}<br>[${l.src}] <a href="${src[5]}" target="_blank">原始页面</a><br><span class="note">${l.time}</span></td></tr>`}).join('');
+  fCount.textContent=`当前显示 ${rows.length} / ${LISTINGS.length} 宗`;
+}
+['fArea','fCert','fSize','fKw'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+document.querySelectorAll('#ltable th[data-k]').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.k;asc=sortK===k?-asc:1;sortK=k;render();}));
+render();
+
+/* ============ 信源表 ============ */
+const tierClass={S:'s',A:'a',B:'b',C:'c'};
+document.querySelector('#stable tbody').innerHTML=SOURCES.map(s=>
+ `<tr><td>${s[0]}</td><td><a href="${s[5]}" target="_blank">${s[1]}</a></td><td><span class="tier ${tierClass[s[2]]}" style="padding:0"><b>${s[2]}</b></span></td><td>${s[3]}</td><td>${s[4]}</td></tr>`).join('');
+
+/* ============ 证据链 ============ */
+document.getElementById('chains').innerHTML=CHAINS.map(c=>`
+ <div class="chain rv">
+   <h4>${c.t}</h4>
+   <ol>${c.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+   <div class="conf"><span class="dot ${c.lv}"></span>${c.lvtxt}　·　信源：${c.srcs.map(id=>{const s=SOURCES.find(x=>x[0]===id);return `<a href="${s[5]}" target="_blank">[${id}]</a>`}).join(' ')}</div>
+ </div>`).join('');
+
+/* ============ 动画 ============ */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.kpi .num[data-n]').forEach(el=>{
+  const target=+el.dataset.n, suffix=el.querySelector('small').outerHTML;
+  const obs=new IntersectionObserver(es=>{if(es[0].isIntersecting){obs.disconnect();
+    const t0=performance.now();(function tick(t){const p=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-p,3);
+      el.innerHTML=fmt(Math.round(target*e))+suffix;if(p<1)requestAnimationFrame(tick)})(t0);}});
+  obs.observe(el);});
+
+/* ============ 图表 ============ */
+const AX={axisLabel:{color:'#5b6675'},axisLine:{lineStyle:{color:'#e3ded4'}},splitLine:{lineStyle:{color:'#efece4'}}};
+const TIP={backgroundColor:'#fff',borderColor:'#e3ded4',textStyle:{color:'#1c2430'}};
+const C_GM='#16324f',C_SG='#b58a3a',C_BAD='#b5452f',C_LINE='#1e6e52';
+
+/* 单价条形图 */
+const sorted=[...LISTINGS].filter(l=>l.unit).sort((a,b)=>a.unit-b.unit);
+echarts.init(chartUnit).setOption({
+ tooltip:{...TIP,trigger:'item',formatter:p=>`${p.name}<br><b>${fmt(p.value)} 元/㎡</b>`},
+ legend:{show:false},
+ grid:{left:8,right:56,top:36,bottom:8,containLabel:true},
+ xAxis:{type:'value',...AX,name:'元/㎡'},
+ yAxis:{type:'category',data:sorted.map(l=>l.name.length>13?l.name.slice(0,12)+'…':l.name),...AX,axisLabel:{color:'#1c2430',fontSize:11.5}},
+ series:[{type:'bar',barWidth:13,
+   data:sorted.map(l=>({value:l.unit,itemStyle:{color:l.cert!=='红本'?C_BAD:(l.area==='光明'?C_GM:C_SG),borderRadius:[0,3,3,0]}})),
+   label:{show:true,position:'right',color:'#5b6675',fontSize:11,formatter:p=>fmt(p.value)},
+   markLine:{symbol:'none',data:[{xAxis:7320}],lineStyle:{color:C_LINE,type:'dashed',width:2},
+     label:{color:C_LINE,formatter:'全市实测成交均价 7320 元/㎡',position:'insideEndTop'}}}]});
+
+/* 面积×总价散点 */
+echarts.init(chartScatter).setOption({
+ tooltip:{...TIP,trigger:'item',formatter:p=>`${p.data[3]}<br>建面 ${fmt(p.data[0])}㎡ · 报价 ${fmt(p.data[1])} 万<br>单价 ${fmt(p.data[2])} 元/㎡`},
+ grid:{left:8,right:30,top:36,bottom:8,containLabel:true},
+ xAxis:{type:'value',name:'建筑面积 ㎡',...AX},
+ yAxis:{type:'value',name:'报价（万元）',...AX},
+ series:[{type:'scatter',symbolSize:d=>Math.max(12,Math.sqrt(d[1])/5.2),
+  data:LISTINGS.filter(l=>l.price&&l.bldg).map(l=>[l.bldg,l.price,l.unit,l.name,l.area]),
+  itemStyle:{color:p=>p.data[4]==='光明'?'rgba(22,50,79,.8)':'rgba(181,138,58,.85)',borderColor:'#fff',borderWidth:1},
+  label:{show:true,position:'top',fontSize:10,color:'#8a93a3',formatter:p=>p.data[3].slice(0,6)},
+  markArea:{itemStyle:{color:'rgba(30,110,82,.07)'},label:{color:C_LINE,position:'insideTop'},
+   data:[[{xAxis:20000,name:'目标区间 2万–4万㎡'},{xAxis:40000}]]}}]});
+
+/* 价格带 */
+const bands=[['原关外二手成交带',5000,9000],['两地二手挂牌主力带',6000,12000],['光明一手入门段',8300,12500],['光明一手高段',12500,14500],['宝安新建实际成交',15000,17000],['市场化一手报价带',15000,30000]];
+echarts.init(chartBands).setOption({
+ tooltip:{...TIP,trigger:'item',formatter:p=>p.seriesType==='custom'?`${bands[p.dataIndex][0]}<br><b>${fmt(bands[p.dataIndex][1])} – ${fmt(bands[p.dataIndex][2])} 元/㎡</b>`:p.name},
+ grid:{left:8,right:24,top:36,bottom:8,containLabel:true},
+ xAxis:{type:'category',data:bands.map(b=>b[0]),...AX,axisLabel:{color:'#1c2430',interval:0,rotate:16,fontSize:11}},
+ yAxis:{type:'value',name:'元/㎡',...AX},
+ series:[{type:'custom',
+  renderItem:(p,api)=>({type:'rect',shape:{x:api.coord([p.dataIndex,0])[0]-24,y:api.coord([0,api.value(2)])[1],width:48,height:Math.max(2,api.coord([0,api.value(1)])[1]-api.coord([0,api.value(2)])[1])},style:{fill:'rgba(22,50,79,.30)',stroke:C_NavyFix(),lineWidth:1.5}}),
+  data:bands.map((b,i)=>[i,b[1],b[2]])},
+  {type:'scatter',symbol:'diamond',symbolSize:16,itemStyle:{color:C_LINE},data:[[1,7320]],
+   name:'全市实测成交均价',tooltip:{formatter:'全市实测成交均价 7320 元/㎡'}}]});
+function C_NavyFix(){return C_GM}
+
+/* 租金 */
+echarts.init(chartRent).setOption({
+ tooltip:{...TIP,trigger:'axis'},
+ grid:{left:8,right:24,top:36,bottom:8,containLabel:true},
+ xAxis:{type:'category',data:['松岗挂牌下限','松岗挂牌上限','光明市场化下限','光明国资底价上限','松岗标的A自述','松岗标的B自述'],...AX,axisLabel:{color:'#1c2430',interval:0,rotate:16,fontSize:11}},
+ yAxis:{type:'value',name:'元/㎡/月',...AX},
+ series:[{type:'bar',barWidth:30,
+  data:[{value:16,itemStyle:{color:C_SG}},{value:28,itemStyle:{color:C_SG}},
+        {value:12,itemStyle:{color:C_GM}},{value:37,itemStyle:{color:C_GM}},
+        {value:34.6,itemStyle:{color:C_LINE}},{value:33.9,itemStyle:{color:C_LINE}}],
+  itemStyle:{borderRadius:[4,4,0,0]},
+  label:{show:true,position:'top',color:'#5b6675',fontSize:11.5}}]});
+
+window.addEventListener('resize',()=>document.querySelectorAll('.chart').forEach(el=>{const i=echarts.getInstanceByDom(el);i&&i.resize()}));
+</script>
+</body>
+</html>

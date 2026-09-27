@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>标的核查 D5 · 松岗广田路52亩独院园区 · 2026年9月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f5f1;--card:#fff;--ink:#1c2430;--sub:#5b6675;--faint:#8a93a3;--line:#e3ded4;--navy:#16324f;--verm:#b5452f;--green:#1e6e52;--amber:#9a6b1a;--shadow:0 1px 2px rgba(28,36,48,.05),0 8px 28px rgba(28,36,48,.07)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Noto Serif SC","Songti SC",serif}
+a{color:var(--verm);text-decoration:none;border-bottom:1px solid rgba(181,69,47,.3)}
+a:hover{border-bottom-color:var(--verm);background:rgba(181,69,47,.06)}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:4px;height:56px;flex-wrap:wrap}
+nav .brand{font-family:"Noto Serif SC",serif;font-weight:900;color:var(--navy);font-size:15px}
+nav a.nl{color:var(--sub);border:none;font-size:13.5px;padding:6px 10px;border-radius:8px}
+nav a.nl:hover{background:#eee9df;color:var(--navy)}
+.hero{padding:56px 0 36px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fbf9f5,var(--paper))}
+.kicker{display:inline-block;background:var(--navy);color:#fff;font-size:12.5px;letter-spacing:.28em;padding:5px 14px;border-radius:3px}
+h1{font-size:clamp(24px,4vw,36px);line-height:1.35;margin:18px 0 12px;font-weight:900;color:var(--navy)}
+.hero .sub{color:var(--sub);font-size:15px;max-width:760px}
+.hero .meta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 15px;font-size:13px;color:var(--sub);box-shadow:var(--shadow)}
+.pill.risk-mid{border-color:var(--amber);color:var(--amber);font-weight:700}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+.secno{font-size:13px;letter-spacing:.3em;color:var(--verm);font-weight:700}
+h2{font-size:clamp(20px,2.6vw,26px);color:var(--navy);margin:6px 0 14px;font-weight:900}
+p{margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow);margin-bottom:14px}
+.fact{border-left:4px solid var(--navy)}
+.fact::before{content:"事 实";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--navy);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.view{border-left:4px solid var(--verm);background:linear-gradient(180deg,#fff,#fdf8f5)}
+.view::before{content:"专业解读";display:inline-block;font-size:11px;letter-spacing:.2em;background:var(--verm);color:#fff;border-radius:3px;padding:2px 8px;margin-bottom:10px}
+.tblwrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#f2eee6;color:var(--navy);font-weight:700;white-space:nowrap}
+.tag{display:inline-block;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:500;margin:1px 3px 1px 0;white-space:nowrap}
+.tag.ok{background:#e4f0ea;color:var(--green)}
+.tag.warn{background:#fdf3e3;color:var(--amber)}
+.tag.risk{background:#fbe7e4;color:var(--verm)}
+.note{font-size:12.8px;color:var(--faint);line-height:1.7}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;margin:10px 0}
+.flow .node{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 14px;box-shadow:var(--shadow)}
+.flow .node b{color:var(--navy)}
+.flow .arr{color:var(--faint);font-size:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.kpi b{display:block;font-size:22px;color:var(--navy);font-family:"Noto Serif SC",serif}
+.kpi span{font-size:12.5px;color:var(--faint)}
+footer{padding:36px 0 56px;color:var(--faint);font-size:13px}
+.tblwrap{-webkit-overflow-scrolling:touch}
+@media(max-width:640px){section{padding:36px 0}.card{padding:16px 16px}nav a.nl{padding:10px 12px;font-size:14px}th,td{padding:10px 12px}}
+@media(max-width:860px){.tblwrap::after{content:"◀ 左右滑动查看完整表格 ▶";display:block;text-align:center;font-size:11.5px;color:var(--faint);padding:6px 0 8px;border-top:1px dashed var(--line)}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="brand">标的核查 D5</span>
+  <a class="nl" href="../index.html#listings">← 返回主报告标的库</a>
+  <a class="nl" href="../index.html#ddtier">尽调分级</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">ASSET-LEVEL REVIEW · D5</span>
+  <h1>松岗广田路 52 亩独门独院园区（二手）<br>主体待解锁：中介挂牌，业主未披露</h1>
+  <p class="sub">标的对应主报告 02 号标的库"广田路独门独院工业园，约52亩"（信源 S7，指点网挂牌：占地 34,471㎡、建面 24,127㎡、报价 2 亿、股权过户、当前空置）。本报告与 D1–D4 的区别：D1–D4 的业主均已在工商体系锁定，本标的业主匿名，因此本报告为<b>标的级核查</b>——凡是无需业主身份即可核实的事项（参数自洽性、区位、规划、回报测算、交易结构风险）已全部核查完毕；主体核查的解锁路径与清单在 06 章列明。核查时点 2026 年 9 月 27 日。</p>
+  <div class="meta">
+    <span class="pill risk-mid">综合评级：中风险 · 主体待解锁</span>
+    <span class="pill">价格带中位 · 空置可即用</span>
+    <span class="pill">挂牌更新：2025-12-01</span>
+    <span class="pill">核查时点：2026-09-27</span>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="secno">LISTING FACTS</div>
+  <h2>01 · 挂牌参数复核</h2>
+  <div class="kpis">
+    <div class="kpi"><b>34,471㎡</b><span>占地面积（约 52 亩）</span></div>
+    <div class="kpi"><b>24,127㎡</b><span>建筑面积（证载口径待核）</span></div>
+    <div class="kpi"><b>2.0 亿</b><span>挂牌报价（股权过户）</span></div>
+    <div class="kpi"><b>8,290 元/㎡</b><span>建面单价（报价口径）</span></div>
+    <div class="kpi"><b>0.70</b><span>现状容积率（建面/占地）</span></div>
+    <div class="kpi"><b>至 2055-04</b><span>产权年限（剩余约 28.5 年）</span></div>
+  </div>
+  <div class="tblwrap"><table>
+    <tr><th>参数</th><th>挂牌口径</th><th>复核意见</th></tr>
+    <tr><td>位置</td><td>宝安区松岗，广田路双向三车道主干道边</td><td><span class="tag ok">方位可信</span>广田路为松岗—燕罗交界处东西向主干道，沿线确为成片工业区（见 03 章）</td></tr>
+    <tr><td>面积</td><td>占地 34,471.02㎡；建面 24,127.23㎡（单层厂房 18,151.71㎡ + 六层宿舍 5,975.52㎡、120 间）</td><td><span class="tag warn">口径须核</span>页面标题以占地面积 34,471㎡ 标示"厂房面积"，存在用占地冒充满建面的误导风险；单价必须按建面 24,127㎡ 计算，即 8,290 元/㎡而非 5,802 元/㎡</td></tr>
+    <tr><td>工程</td><td>单层厂房层高 9.2–11 米；精装修；现状空置</td><td><span class="tag ok">参数具体</span>层高区间精确到小数，属实地量测口径，编造概率低；9–11 米单层适配物流仓储与重型设备</td></tr>
+    <tr><td>产权</td><td>红本，产权证至 2055 年 4 月</td><td><span class="tag warn">待查册</span>2055 年到期回推土地出让约在 2005 年，与松岗 2003–2005 年集中出让工业地的历史吻合；证载面积、抵押、查封以查册为准</td></tr>
+    <tr><td>交易</td><td>股权过户，报价 2 亿</td><td><span class="tag risk">结构风险</span>买方将继承项目公司全部历史负债与或有负债，尽调门槛高于产权过户（见 05 章）</td></tr>
+    <tr><td>发布者</td><td>联系人"张丽"，身份中介，平台未认证；页面更新 2025-12-01</td><td><span class="tag warn">匿名盘</span>中介盘、未认证、无业主信息——主体识别是出价前的第一道闸门</td></tr>
+  </table></div>
+  <div class="card view"><b>解读：参数颗粒度支持"真实物业"判断，但口径陷阱明确。</b>层高 9.2–11 米、宿舍 120 间、产权到期月份这类细节是踩过盘的人才写得出的参数，物业实体大概率真实存在。真正的陷阱在面积口径：标题用占地面积制造"34471㎡ 卖 2 亿、单价 5800 元"的错觉，按建面算实为 8,290 元/㎡——落在主报告证据链结论一的松岗独院挂牌带（6,000–12,000 元/㎡）中位，不虚高也不便宜。谈判的锚必须钉在建面单价上。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">SUBJECT IDENTIFICATION</div>
+  <h2>02 · 主体识别状态与解锁路径</h2>
+  <div class="card fact"><b>事实：</b>挂牌页全文未出现业主名称、宗地号与不动产权证号，发布主体为未认证中介 <a href="https://www.shangpu99.com/gccsdetail/id/1487.html" target="_blank">[指点网挂牌页]</a>。以"广田路""52 亩""34,471㎡""产权至 2055 年"等参数组合在公开渠道检索，未能匹配到可锁定的业主企业——这与 D4 恒兆标的（挂牌页直接写明"洪桥头恒兆工业区"，可据园区名反查主体）形成对比。</div>
+  <div class="card view"><b>解读：匿名不等于有问题，但匿名 + 股权过户是必须破解的组合。</b>股权过户意味着买方买的是"持有该物业的公司"而不是物业本身，公司历史负债、对外担保、未决诉讼、税务欠缴全部随股权转移。在不知道这家公司是谁之前出价，等于签空白支票。解锁路径只有一条：通过中介取得产权人名称与不动产权证号。中介拒绝提供或要求先付诚意金才提供的，直接放弃——松岗在挂标的不止这一宗。</div>
+  <div class="flow">
+    <span class="node"><b>① 约谈中介</b><br><span class="note">索取产权人全称 + 21 本/若干本不动产权证号（复印件加盖产权人章）</span></span>
+    <span class="arr">──▶</span>
+    <span class="node"><b>② 不动产查册</b><br><span class="note">逐套核对权利人、抵押、查封、异议登记</span></span>
+    <span class="arr">──▶</span>
+    <span class="node"><b>③ 工商穿透</b><br><span class="note">按 D1–D4 同一流程：失信、被执行、出质、处罚、诉讼、股权结构</span></span>
+    <span class="arr">──▶</span>
+    <span class="node"><b>④ 税务与负债</b><br><span class="note">完税证明、银行贷款、对外担保、应付账款审计</span></span>
+  </div>
+  <p class="note">完成 ① 之前不出价、不付任何名义的款项。②③④ 的执行标准与 D4 子报告相同。</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">LOCATION & PLANNING</div>
+  <h2>03 · 区位与外部性核查</h2>
+  <div class="card fact"><b>事实：广田路走廊是松岗—燕罗的旧改密集带。</b>广田路与罗瑞路交汇处的罗田工业区旧改（拆除约 2.8 万㎡，新型产业方向）已建成和谷山汇城综合体（广田路 35 号，含产业研发办公与配套宿舍）<a href="http://www.banq.cn/html/26036.htm" target="_blank">[房地内参]</a> <a href="https://www.sohu.com/a/748516785_120826559" target="_blank">[搜狐 · 和谷山汇城]</a>；广深公路与广田路交汇处东南侧的龙得利工业园更新单元（拟拆除约 2.1 万㎡）已申报纳入城市更新计划 <a href="https://news.szhome.com/355286.html" target="_blank">[深圳房地产信息网]</a>；罗田第一工业区旧改计容体量约 41 万㎡ <a href="https://www.sohu.com/a/748516785_120826559" target="_blank">[搜狐]</a>。松岗街道层面，"广田路以北片区"被规划为约 10 平方公里的北部创新科技园区 <a href="https://news.ifeng.com/c/7fbON3HVUPM" target="_blank">[凤凰网 · 南方日报]</a>。</div>
+  <div class="card fact"><b>事实：交通靠公路，不靠地铁。</b>和谷山汇城项目资料自述"龙大高速松岗出口直走 600 米" <a href="https://www.163.com/dy/article/JK5U72RN05563W8I.html" target="_blank">[网易 · 和谷山汇城]</a>，即广田路走廊距龙大高速松岗出入口极近，另可接南光高速与广深公路；但走廊上没有地铁站点，松岗三线换乘枢纽（6/11/12 号线）位于广深公路西侧的松岗站一带 <a href="https://static.nfnews.com/content/202410/24/c10192706.html?enterColumnId=75" target="_blank">[南方+]</a>，距广田路沿线有段距离。员工通勤依赖班车与公交，货车通勤反而是强项。</div>
+  <div class="card view"><b>解读：旧改对这份物业是双向的。</b>正面：周边旧改逐一兑现后，片区面貌、配套与土地价值上行，空置园区正好以低成本持有等待重估；若标的落入某个更新单元范围，还存在被开发商收购的期权价值。负面：一旦标的自身被划入拆除重建范围，买方将面对的是漫长谈判与搬迁补偿程序而非正常使用——出价前必须向宝安区城市更新和土地整备局核实标的是否在任一更新单元或土地整备范围内（平岗、溪头等松岗大单元的位置与标的须逐图比对，见主报告 05 章）。物流仓储是自洽的过渡业态：单层 9–11 米层高、空置即交付、52 亩场地可进拖头车，正好承接大空港与松岗制造业的仓储需求。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">YIELD & VALUATION</div>
+  <h2>04 · 回报与估值测算</h2>
+  <div class="tblwrap"><table>
+    <tr><th>情景</th><th>租金假设（元/㎡/月）</th><th>年租金（24,127㎡）</th><th>对 2 亿报价的回报率</th><th>依据</th></tr>
+    <tr><td>保守</td><td>16</td><td>约 463 万</td><td>2.3%</td><td>松岗租赁挂牌带下沿 <a href="http://sz.zhaoshang800.com/cf/a440306000b440306024c1/" target="_blank">[S13]</a></td></tr>
+    <tr><td>中性</td><td>22</td><td>约 637 万</td><td>3.2%</td><td>挂牌带中位 [S13]</td></tr>
+    <tr><td>乐观</td><td>28</td><td>约 810 万</td><td>4.1%</td><td>挂牌带上沿 [S13]</td></tr>
+    <tr><td>物流溢价</td><td>38–45</td><td>约 1,100–1,303 万</td><td>5.5%–6.5%</td><td>单层 10 米层高物业 2023 年市场口径，时效偏弱，仅作上限参照 <a href="https://www.shangpu99.com/gccsdetail/id/463.html" target="_blank">[S8]</a></td></tr>
+  </table></div>
+  <div class="card view"><b>解读：2 亿报价隐含回报率不达标，议价是必选项而非可选项。</b>按中性情景 3.2% 的隐含回报，低于主报告 04 章"租金回报 4%–6% 买租换算基准"的下沿。要让回报率达到 4% 以上，成交价须压至约 1.6 亿（单价约 6,630 元/㎡）——恰好落在评估机构公布的原关外二手成交带 5,000–9,000 元/㎡ 的中段 <a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">[S19]</a>。卖方"空置"状态是买方筹码：空置意味着卖方零现金流持有，时间站在买方一边。谈判区间建议 1.6–1.8 亿，并注意深圳 2026 年供地新规的制度下限——申报价低于市场价 20% 以上时区政府可行使优先购买权 <a href="https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html" target="_blank">[S14]</a>。剩余产权 28.5 年，按直线法口径折算年化持有成本约 3.5%，与中性租金回报相抵后几乎归零——这决定了本标的的正确玩法是"低价买入 + 物流现金流 + 旧改期权"，而不是按现行报价收租。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">TRANSACTION RISK</div>
+  <h2>05 · 交易结构与风险清单</h2>
+  <div class="tblwrap"><table>
+    <tr><th>风险项</th><th>等级</th><th>说明与对冲</th></tr>
+    <tr><td>主体未知</td><td><span class="tag risk">高</span></td><td>未取得产权人名称与证号前不出价（02 章流程）</td></tr>
+    <tr><td>股权过户继承负债</td><td><span class="tag risk">高</span></td><td>交易前审计项目公司三年账目：银行借款、对外担保、应付工程款、税务欠缴、劳动纠纷；合同设置陈述保证与分期付款 + 尾款留置</td></tr>
+    <tr><td>面积口径误导</td><td><span class="tag warn">中</span></td><td>一切以不动产权证证载建面为准；合同按证载面积计价，多退少补条款</td></tr>
+    <tr><td>划入旧改/整备范围</td><td><span class="tag warn">中</span></td><td>向宝安区城市更新和土地整备局书面核实；如已划入，按补偿逻辑而非使用逻辑重新定价</td></tr>
+    <tr><td>剩余年限 28.5 年</td><td><span class="tag warn">中</span></td><td>估值按短年期折现；关注深圳工业用地续期政策走向（主报告 03 章）</td></tr>
+    <tr><td>消防与环评</td><td><span class="tag warn">中</span></td><td>物流仓储须核消防验收意见书与丙类库房资质；如改生产用途须重新环评</td></tr>
+    <tr><td>无地铁通勤</td><td><span class="tag ok">低</span></td><td>对物流仓储用途影响小；对生产型用途的招工有影响，须配班车</td></tr>
+  </table></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">ACTION LIST</div>
+  <h2>06 · 出价前尽调行动清单</h2>
+  <div class="tblwrap"><table>
+    <tr><th>#</th><th>动作</th><th>责任方</th><th>完成标准</th></tr>
+    <tr><td>1</td><td>约谈中介，索取产权人全称、不动产权证号、证复印件</td><td>买方 + 中介</td><td>取得加盖公章的证复印件；拒绝提供即终止</td></tr>
+    <tr><td>2</td><td>不动产登记中心查册</td><td>买方律师</td><td>逐套核对权利人、抵押、查封、异议登记</td></tr>
+    <tr><td>3</td><td>工商穿透与六项核查（同 D1–D4 流程）</td><td>买方律师</td><td>失信/被执行/出质/处罚/诉讼/股权结构全清</td></tr>
+    <tr><td>4</td><td>项目公司财务与税务尽调</td><td>会计师</td><td>三年审计报告、完税证明、银行征信、担保清单</td></tr>
+    <tr><td>5</td><td>书面核实是否落入更新单元/土地整备范围</td><td>买方律师 → 宝安区城市更新和土地整备局</td><td>取得书面或官网比对结论</td></tr>
+    <tr><td>6</td><td>实地踏勘：工程状况、消防、周边动线、货运进出</td><td>买方 + 工程顾问</td><td>踏勘纪要 + 影像存档</td></tr>
+    <tr><td>7</td><td>按 1.6–1.8 亿区间起草谈判方案与交易结构（资金监管、分期、尾款留置）</td><td>买方律师 + 财务</td><td>Term sheet</td></tr>
+  </table></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">OPINION</div>
+  <h2>07 · 综合研判</h2>
+  <div class="card view"><b>中风险 · 主体待解锁：物业本身值得推进到"约谈中介取证"一步，但在主体解锁前不投入付费尽调。</b>与四份主体尽调子报告的对象相比，本标的的独特价值在于三点：52 亩占地、0.70 容积率意味着约 1 万㎡ 的富余场地，在深圳工业用地稀缺的背景下，空地本身就是期权；单层 9–11 米层高是松岗在挂标的中最适配物流仓储的工程参数；空置状态既是卖方弱点（零现金流持有）也是买方优点（即买即用、无清租成本）。致命点同样清楚：主体匿名 + 股权过户 + 挂牌口径用占地冒充面积。建议下一步仅执行 06 章第 1 项动作——成本为零，收益是判断这宗标的值不值得进入 D1–D4 级别的全套尽调。</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secno">SOURCES</div>
+  <h2>信源清单</h2>
+  <div class="tblwrap"><table>
+    <tr><th>编号</th><th>信源</th><th>用途</th><th>时点 / 状态</th></tr>
+    <tr><td>D5-1</td><td><a href="https://www.shangpu99.com/gccsdetail/id/1487.html" target="_blank">指点网 · 标的挂牌页（主报告 S7）</a></td><td>挂牌参数主源</td><td>2025-12-01 更新，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-2</td><td><a href="http://www.banq.cn/html/26036.htm" target="_blank">房地内参 · 罗田工业区旧改规划（广田路×罗瑞路）</a></td><td>走廊旧改实证</td><td>2016-02，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-3</td><td><a href="https://www.sohu.com/a/748516785_120826559" target="_blank">搜狐 · 和谷山汇城项目资料（广田路 35 号）</a></td><td>罗田旧改落地形态、周边旧改清单</td><td>2023-12，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-4</td><td><a href="https://www.163.com/dy/article/JK5U72RN05563W8I.html" target="_blank">网易 · 和谷山汇城（龙大高速松岗出口 600 米）</a></td><td>高速可达性佐证</td><td>2024-12，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-5</td><td><a href="https://news.szhome.com/355286.html" target="_blank">深圳房地产信息网 · 龙得利工业园更新单元（广深公路×广田路）</a></td><td>走廊旧改实证</td><td>2020-12，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-6</td><td><a href="https://news.ifeng.com/c/7fbON3HVUPM" target="_blank">凤凰网（南方日报）· 松岗三大板块规划：广田路以北 10k㎡ 北部创新科技园</a></td><td>片区规划定位</td><td>实测可开（2026-09-27）</td></tr>
+    <tr><td>D5-7</td><td><a href="https://static.nfnews.com/content/202410/24/c10192706.html?enterColumnId=75" target="_blank">南方+ · 12 号线二期与松岗三线换乘（主报告 S28）</a></td><td>地铁格局对照</td><td>2024-10，2026-09-27 实测可开</td></tr>
+    <tr><td>D5-8</td><td><a href="http://sz.zhaoshang800.com/cf/a440306000b440306024c1/" target="_blank">中工招商网 · 松岗厂房租赁列表（主报告 S13）</a></td><td>租金情景假设</td><td>2026-09 实时，浏览器实测可开</td></tr>
+    <tr><td>D5-9</td><td><a href="http://www.cngzy.com/upload/202509/15/202509150946183840.pdf" target="_blank">深圳国资评估机构 · 工业物业市场调研报告（主报告 S19）</a></td><td>成交价带锚</td><td>2025-09，实测可开</td></tr>
+    <tr><td>D5-10</td><td><a href="https://www.sz.gov.cn/zfgb/2026/gb1411/content/post_12761919.html" target="_blank">深圳市政府 · 工业及其他产业用地供应管理办法（主报告 S14）</a></td><td>议价下限制度依据</td><td>2026-04，实测可开</td></tr>
+    <tr><td>D5-11</td><td><a href="https://www.shangpu99.com/gccsdetail/id/463.html" target="_blank">指点网 · 松岗单层 10 米层高厂房租金口径（主报告 S8）</a></td><td>物流租金上限参照（时效偏弱）</td><td>2023-07，实测可开</td></tr>
+  </table></div>
+  <p class="note" style="margin-top:10px">本报告所有外部链接均于 2026-09-27 实测可打开。挂牌参数为卖方/中介口径，产权、抵押、查封与股东名册的最终状态以不动产登记中心查册与工商内档为准。</p>
+</div></section>
+
+<footer><div class="wrap">标的核查子报告 D5 · 隶属《深圳光明区 × 宝安松岗 工业物业购置研究报告》· 核查时点 2026-09-27 · <a href="../index.html">返回主报告</a></div></footer>
+
+</body>
+</html>
